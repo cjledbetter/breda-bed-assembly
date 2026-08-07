@@ -1,0 +1,90 @@
+================================================================================
+EXECUTIVE SUMMARY, TOOL LIST & STEP-BY-STEP ASSEMBLY GUIDE
+PROJECT: BREEDA BEDS MURPHY BED ASSEMBLY
+================================================================================
+
+1. EXECUTIVE SUMMARY & OVERVIEW
+-------------------------------
+This project details the complete end-to-end assembly procedure for a Breeda Beds wall bed system with side hutches. (Note: Trailing audio bleed-over from the showroom walkthrough video has been omitted to focus 100% on the assembly video).
+
+Key highlights include:
+• Bed Frame Capacity: Heavy-duty metal subframe rated up to 1,400 lbs capacity across Twin, Full, and Queen sizes.
+• Counter-Balance Spring Mechanism: Adjustable spring tension tuned to mattress weight for effortless one-handed opening and closing.
+• Critical 1/2-Inch Reveal Dimension: Precise 0.5" offset required when mounting the metal bed frame onto door face panels to ensure flawless cabinet closure.
+• Safety Wall Anchoring: Unit MUST be anchored directly into wall studs via top and bottom nailers before cocking spring arms or lowering bed face.
+
+
+2. REQUIRED TOOLS & HARDWARE LIST
+----------------------------------
+[A] Required Tools:
+  • Stud Finder (for locating wall studs behind drywall)
+  • Power Drill / Driver with:
+    - 1/8" Drill Bit (for pilot holes into wall studs)
+    - 3/8" Drill Bit or Countersink Bit (for countersinking screw heads)
+  • Allen Wrench / Hex Keys (for frame bolts)
+  • Wrench / Socket Set:
+    - 5/16" Wrench/Socket (for 5/16" Nylock nuts on mechanism & frame)
+    - 1/4" Wrench/Socket (for leg tie-rod bolts)
+  • Screwdrivers (Phillips & Flathead)
+  • Rubber Mallet (for tapping cam fittings & leg hardware)
+  • PVC Arm Tension Tube (Included helper tube for cocking mechanism arms)
+  • Tape Measure / Precision Ruler (Critical for 1/2" header reveal offset)
+  • Spirit Level & Shims (for leveling cabinet prior to wall attachment)
+  • Spray Lubricant (WD-40 or Silicone Spray - for spring noise)
+
+[B] Hardware Package Components:
+  • Cam fittings & Cam connecting studs
+  • Fast Caps (decorative screw cover caps)
+  • Heavy-duty Counter-Balance Mechanism Springs
+  • Hardware Card 3 (Bed face frame 4-corner connectors)
+  • Hardware Card 7 (Metal bed frame to door panel screws)
+  • Stop Cylinders (inserted into lower corner bracket holes)
+  • Allen Head Bolts & 5/16" Nylock Nuts (Hole 1 stop bolt at 6-5/8" from header)
+  • 5/16" Hex Head Bolts & Nylock Nuts (Hole 3 mechanism seating bolt at 19-1/4" from header, & Hole 2 security bolt)
+  • Nylon washers, steel filler washers, steel holding washers, & Nylock nuts (Leg pivot assembly)
+  • Steel Leg Tie-Rod with 1/4" bolts & star washers
+  • Cabinet Wall Anchoring Screws (Top & bottom nailers)
+  • Drawer Slide Hardware & Cam Fittings
+  • 35mm Euro Door Hinges & Base Plates (Hole #2 mounting)
+
+
+3. ORDERED STEP-BY-STEP ASSEMBLY INSTRUCTIONS
+----------------------------------------------
+
+--- STAGE 1: CABINET & SIDE HUTCH PREPARATION ---
+1. Hardware Pre-Insertion: Lay out cabinet and side hutch panels flat on a soft surface; press cam fittings and thread cam connecting studs into pre-bored holes.
+2. Hutch Assembly: Align hutch side panels with top/bottom panels; turn cam fittings clockwise to lock hutch units together.
+3. Outer Cabinet Assembly: Position side hutches ~16" from wall. Attach top nailer to bed cabinet top panel. Secure top assembly and toe kick to right hutch, then align left hutch into position and lock all cams.
+4. Headboard & Lower Nailer: Insert headboard and lower nailer panel with cam fittings facing upward; tighten cams securely.
+
+--- STAGE 2: LEVELING & WALL ANCHORING ---
+5. Position & Level Cabinet: Tilt bed cabinet upright into final position against wall. Check level side-to-side and front-to-back; slide shims underneath cabinet feet if necessary.
+6. Mark & Drill Wall Studs: Locate studs behind top nailer using a stud finder; mark stud centerlines onto nailer. Drill 1/8" pilot holes through top nailer at each stud location.
+7. Countersink & Drive Wall Screws: Countersink holes with a 3/8" bit. Drive wall screws firmly through nailer into studs. Cover screw heads with Fast Caps.
+
+--- STAGE 3: MECHANISM & ARM COCKING ---
+8. Install Springs: Consult spring application chart for your bed size and mattress weight; insert required number of counter-balance springs onto mechanism plate.
+9. Attach Mechanism: Bolt spring mechanism plate to inside face of cabinet side panels using dedicated hardware tube screws.
+10. Cock Mechanism Arms: Slip provided PVC tube over spring arm; pull arm downward until internal arm lock clicks into open/cocked position. Repeat for opposite side. (WARNING: High spring tension!).
+
+--- STAGE 4: BED FACE FRAME & DOOR PANELS ---
+11. Assemble Bed Frame: Lay steel frame channels on floor; connect 4 corners using Hardware Card 3. Insert stop cylinders into lower bracket holes on the two corners farthest from cabinet.
+12. Align Door Panels: Lay door panels face-down on a soft surface with handle holes farthest from cabinet. Press doors tightly together along center seam.
+13. Frame-to-Door Placement (CRITICAL STEP): Position metal frame over doors. Set frame exactly 1/2 INCH (0.5") from header end of door panels. (CRITICAL: 1/2" reveal offset!). Drive screws from Hardware Card 7 to secure frame to doors.
+14. Support Stiffeners: Attach middle support stiffener midway between header and footer; install remaining two support stiffeners between center stiffener and bed ends.
+15. Mechanism Pivot Bolts:
+    - Insert Allen head bolt into Hole 1 (6-5/8" from header) and secure with 5/16" Nylock nut (acts as rotation stop).
+    - Insert 5/16" Hex head bolts through Hole 3 (19-1/4" from header) from outside; finger-tighten 5/16" Nylock nuts.
+
+--- STAGE 5: MOUNTING BED FACE & LEG SETUP ---
+16. Mount Face Assembly to Arms: Stand bed face panel vertically between mechanism arms. Lift assembly and seat Hole 3 hex bolts into notches at end of mechanism arms.
+17. Rotate & Secure: Rotate bed face outward until Hole 1 Allen bolt rests against mechanism notch. Insert 5/16" hex bolt into Hole 2; tighten all nuts at Hole 2 and Hole 3 securely. Attach handles.
+18. Release Arm Locks: Pull outward on bed face panel to disengage mechanism arm locks (audible click). (Note: Tension will feel heavy until mattress is added).
+19. Install Legs & Tie Rod: Slide nylon washer onto leg stem; insert through frame hole. From inside, install steel filler washer, steel holding washer, and Nylock nut. Rotate leg down against stop; connect steel leg tie rod between both legs using 1/4" bolts and star washers.
+20. Align Reveals & Bottom Nailer: Close bed face assembly while pivoting legs closed. Inspect side reveals for even spacing. Nudge cabinet base slightly if needed. Attach bottom nailer to wall studs with 1 screw per side.
+21. Spring Lubrication (If Noisy): Spray WD-40 or silicone lubricant onto spring coils if noisy during first operation; open and close bed several times to work lube in.
+
+--- STAGE 6: SIDE HUTCH DRAWERS & DOORS ---
+22. Drawer Box Assembly: Install cam fittings into drawer panels; assemble sides to back; slide bottom into grooves; attach drawer front; install handles.
+23. Drawer Slides: Mount drawer slides to bottom edge of drawer box pushing firmly against back of front face; mount cabinet slide tracks into pre-bored hutch holes; slide drawers into place.
+24. Hutch Cabinet Doors: Press hinge base plates into outside panel holes #2; seat 35mm hinges into door back holes and turn screws 1/2 turn clockwise; snap hinges onto base plates; install door handles.

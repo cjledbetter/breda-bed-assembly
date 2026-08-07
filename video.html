@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Breda Beds Murphy Bed Assembly | Video Guide</title>
+  <meta name="description" content="Official video assembly guide for Breda Beds Murphy Bed with side hutches. Embedded YouTube tutorial with interactive chapter markers.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-primary: #0f172a;
+      --bg-card: #1e293b;
+      --accent-blue: #38bdf8;
+      --accent-indigo: #6366f1;
+      --accent-red: #ef4444;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --border-color: #334155;
+      --glass-bg: rgba(30, 41, 59, 0.85);
+      --glass-border: rgba(255, 255, 255, 0.1);
+      --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background-color: var(--bg-primary);
+      color: var(--text-main);
+      line-height: 1.6;
+      padding-top: 80px;
+    }
+
+    /* Navbar */
+    .navbar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: 70px;
+      background: var(--glass-bg);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--glass-border);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2rem;
+    }
+    .brand {
+      display: flex; align-items: center; gap: 0.75rem;
+      font-weight: 700; font-size: 1.25rem; color: #fff; text-decoration: none;
+    }
+    .brand-icon {
+      font-size: 1.5rem;
+      background: linear-gradient(135deg, var(--accent-blue), var(--accent-indigo));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .nav-links { display: flex; gap: 1rem; list-style: none; }
+    .nav-link {
+      padding: 0.6rem 1.2rem; border-radius: 8px; color: var(--text-muted);
+      text-decoration: none; font-weight: 500; font-size: 0.95rem; transition: all 0.2s ease;
+      display: flex; align-items: center; gap: 0.5rem;
+    }
+    .nav-link:hover, .nav-link.active {
+      color: #fff; background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    .nav-link.active {
+      background: linear-gradient(135deg, rgba(56, 189, 248, 0.2), rgba(99, 102, 241, 0.2));
+      border-color: var(--accent-blue); color: var(--accent-blue);
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+    }
+
+    .video-header {
+      margin-bottom: 1.5rem;
+    }
+    .video-title { font-size: 2rem; font-weight: 800; color: #fff; margin-bottom: 0.5rem; }
+    .video-desc { color: var(--text-muted); font-size: 1rem; }
+
+    /* Video Frame Container */
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+      height: 0;
+      overflow: hidden;
+      border-radius: 16px;
+      background: #000;
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-lg);
+      margin-bottom: 2rem;
+    }
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      border: 0;
+    }
+
+    /* Chapter List */
+    .chapters-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 1.75rem;
+      margin-bottom: 2rem;
+    }
+    .chapters-title { font-size: 1.3rem; font-weight: 700; color: #fff; margin-bottom: 1rem; }
+    .chapter-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+    }
+    .chapter-item {
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 1rem;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      transition: all 0.2s ease;
+    }
+    .chapter-item:hover {
+      border-color: var(--accent-blue);
+      background: rgba(56, 189, 248, 0.08);
+    }
+    .chapter-icon { font-size: 1.5rem; }
+    .chapter-info { display: flex; flex-direction: column; }
+    .chapter-name { font-weight: 600; color: #fff; font-size: 0.95rem; }
+    .chapter-meta { font-size: 0.85rem; color: var(--text-muted); }
+
+    /* Footer Nav */
+    .quick-nav {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    .btn-nav {
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.2s ease;
+    }
+    .btn-nav:hover {
+      border-color: var(--accent-blue);
+      color: var(--accent-blue);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <nav class="navbar">
+    <a href="index.html" class="brand">
+      <span class="brand-icon">🛏️</span> Breda Beds Manual
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link">📖 Shop Manual</a></li>
+      <li><a href="deck.html" class="nav-link">🎴 Step Slide Deck</a></li>
+      <li><a href="video.html" class="nav-link active">🎥 Video Guide</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    
+    <header class="video-header">
+      <h1 class="video-title">🎥 Official Video Walkthrough</h1>
+      <p class="video-desc">Watch the complete step-by-step assembly tutorial video for the Breda Beds Murphy Bed with side hutches.</p>
+    </header>
+
+    <!-- Embedded YouTube Video -->
+    <div class="video-wrapper">
+      <iframe src="https://www.youtube.com/embed/j13vbqS3p0Q?si=uDxDSL93LvTlJBv3" title="Breda Beds Murphy Bed Assembly Video Player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <!-- Video Chapters -->
+    <div class="chapters-card">
+      <h2 class="chapters-title">📌 Assembly Video Chapters</h2>
+      <div class="chapter-grid">
+        <div class="chapter-item">
+          <span class="chapter-icon">🔨</span>
+          <div class="chapter-info">
+            <span class="chapter-name">Stage 1: Cabinet & Hutch Prep</span>
+            <span class="chapter-meta">Hardware pre-insertion & hutch box assembly</span>
+          </div>
+        </div>
+        <div class="chapter-item">
+          <span class="chapter-icon">🧱</span>
+          <div class="chapter-info">
+            <span class="chapter-name">Stage 2: Leveling & Wall Anchoring</span>
+            <span class="chapter-meta">Stud finder, 1/8" pilot holes & top nailer screws</span>
+          </div>
+        </div>
+        <div class="chapter-item">
+          <span class="chapter-icon">⚙️</span>
+          <div class="chapter-info">
+            <span class="chapter-name">Stage 3: Spring Mechanism Setup</span>
+            <span class="chapter-meta">Counter-balance spring loading & arm cocking</span>
+          </div>
+        </div>
+        <div class="chapter-item">
+          <span class="chapter-icon">📐</span>
+          <div class="chapter-info">
+            <span class="chapter-name">Stage 4: 0.5" Header Reveal Offset</span>
+            <span class="chapter-meta">Frame-to-door alignment & stiffener installation</span>
+          </div>
+        </div>
+        <div class="chapter-item">
+          <span class="chapter-icon">🛏️</span>
+          <div class="chapter-info">
+            <span class="chapter-name">Stage 5: Face Mounting & Pivot Legs</span>
+            <span class="chapter-meta">Seating bolts, leg tie-rod, bottom nailer anchor</span>
+          </div>
+        </div>
+        <div class="chapter-item">
+          <span class="chapter-icon">🚪</span>
+          <div class="chapter-info">
+            <span class="chapter-name">Stage 6: Hutch Drawers & Doors</span>
+            <span class="chapter-meta">Slide tracks & 35mm Euro door hinge mounting</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation Footer -->
+    <div class="quick-nav">
+      <a href="index.html" class="btn-nav">← Back to Shop Manual</a>
+      <a href="deck.html" class="btn-nav">Go to Step Slide Deck →</a>
+    </div>
+
+  </div>
+
+</body>
+</html>

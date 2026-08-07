@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Breda Beds Murphy Bed Assembly | Interactive Presentation Deck</title>
+  <meta name="description" content="Step-by-step presentation deck with technical blueprint diagrams, screenshot walkthroughs, and hardware callouts for assembling Breda Beds Murphy Bed.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-primary: #0f172a;
+      --bg-card: #1e293b;
+      --accent-blue: #38bdf8;
+      --accent-indigo: #6366f1;
+      --accent-green: #22c55e;
+      --accent-amber: #f59e0b;
+      --accent-red: #ef4444;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --border-color: #334155;
+      --glass-bg: rgba(30, 41, 59, 0.85);
+      --glass-border: rgba(255, 255, 255, 0.1);
+      --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background-color: var(--bg-primary);
+      color: var(--text-main);
+      line-height: 1.6;
+      padding-top: 80px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Navbar */
+    .navbar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: 70px;
+      background: var(--glass-bg);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--glass-border);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2rem;
+    }
+    .brand {
+      display: flex; align-items: center; gap: 0.75rem;
+      font-weight: 700; font-size: 1.25rem; color: #fff; text-decoration: none;
+    }
+    .brand-icon {
+      font-size: 1.5rem;
+      background: linear-gradient(135deg, var(--accent-blue), var(--accent-indigo));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .nav-links { display: flex; gap: 1rem; list-style: none; }
+    .nav-link {
+      padding: 0.6rem 1.2rem; border-radius: 8px; color: var(--text-muted);
+      text-decoration: none; font-weight: 500; font-size: 0.95rem; transition: all 0.2s ease;
+      display: flex; align-items: center; gap: 0.5rem;
+    }
+    .nav-link:hover, .nav-link.active {
+      color: #fff; background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    .nav-link.active {
+      background: linear-gradient(135deg, rgba(56, 189, 248, 0.2), rgba(99, 102, 241, 0.2));
+      border-color: var(--accent-blue); color: var(--accent-blue);
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      flex: 1;
+    }
+
+    /* Deck Header */
+    .deck-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .deck-title { font-size: 1.75rem; font-weight: 800; color: #fff; }
+    .slide-counter {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      padding: 0.5rem 1rem;
+      border-radius: 9999px;
+      font-weight: 600;
+      color: var(--accent-blue);
+    }
+
+    /* Slide Card */
+    .slide-wrapper {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: var(--shadow-lg);
+      margin-bottom: 1.5rem;
+      position: relative;
+    }
+    .slide-content { display: none; }
+    .slide-content.active { display: block; animation: fadeIn 0.3s ease-in-out; }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .slide-stage-badge {
+      display: inline-block;
+      padding: 0.35rem 0.85rem;
+      background: linear-gradient(135deg, var(--accent-blue), var(--accent-indigo));
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.85rem;
+      border-radius: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 1rem;
+    }
+
+    .slide-headline { font-size: 1.6rem; font-weight: 700; color: #fff; margin-bottom: 1rem; }
+    .slide-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      align-items: center;
+    }
+    @media (max-width: 850px) {
+      .slide-grid { grid-template-columns: 1fr; }
+    }
+
+    .slide-img {
+      width: 100%;
+      border-radius: 12px;
+      border: 1px solid var(--border-color);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+      object-fit: cover;
+    }
+
+    .step-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+    .step-item {
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 1rem;
+      border-radius: 8px;
+    }
+    .step-num { font-weight: 700; color: var(--accent-blue); margin-right: 0.5rem; }
+    .step-text { font-size: 0.95rem; color: #e2e8f0; }
+
+    /* Controls Bar */
+    .controls-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--glass-bg);
+      border: 1px solid var(--border-color);
+      padding: 1rem 1.5rem;
+      border-radius: 12px;
+    }
+    .btn {
+      padding: 0.7rem 1.4rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .btn-secondary {
+      background: var(--bg-card);
+      color: var(--text-main);
+      border: 1px solid var(--border-color);
+    }
+    .btn-secondary:hover { background: var(--bg-card-hover); border-color: var(--text-muted); }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent-blue), var(--accent-indigo));
+      color: #fff;
+    }
+    .btn-primary:hover { opacity: 0.9; transform: translateY(-1px); }
+
+    .dots-nav {
+      display: flex;
+      gap: 0.5rem;
+    }
+    .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--border-color);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .dot.active {
+      background: var(--accent-blue);
+      transform: scale(1.2);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <nav class="navbar">
+    <a href="index.html" class="brand">
+      <span class="brand-icon">🛏️</span> Breda Beds Manual
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link">📖 Shop Manual</a></li>
+      <li><a href="deck.html" class="nav-link active">🎴 Step Slide Deck</a></li>
+      <li><a href="video.html" class="nav-link">🎥 Video Guide</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    
+    <header class="deck-header">
+      <h1 class="deck-title">🎴 Step-by-Step Presentation Deck</h1>
+      <div class="slide-counter" id="slideCounter">Slide 1 of 6</div>
+    </header>
+
+    <!-- Slide Container -->
+    <div class="slide-wrapper">
+      
+      <!-- Slide 1 -->
+      <div class="slide-content active" id="slide-1">
+        <span class="slide-stage-badge">Stage 1 of 6</span>
+        <h2 class="slide-headline">Cabinet & Side Hutch Preparation</h2>
+        <div class="slide-grid">
+          <img src="assets/breda_bed_cabinet_prep.jpg" alt="Cabinet Preparation Diagram" class="slide-img">
+          <ul class="step-list">
+            <li class="step-item">
+              <span class="step-num">Step 1:</span>
+              <span class="step-text"><strong>Hardware Pre-Insertion:</strong> Lay panels flat on a blanket; press cam fittings into pre-bored holes and thread cam studs flush.</span>
+            </li>
+            <li class="step-item">
+              <span class="step-num">Step 2:</span>
+              <span class="step-text"><strong>Hutch Assembly:</strong> Join hutch side panels to top/bottom panels; turn cams clockwise to lock.</span>
+            </li>
+            <li class="step-item">
+              <span class="step-num">Step 3:</span>
+              <span class="step-text"><strong>Outer Cabinet:</strong> Place hutches ~16" from wall. Attach top nailer to bed cabinet top panel and join right & left hutches.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="slide-content" id="slide-2">
+        <span class="slide-stage-badge">Stage 2 of 6</span>
+        <h2 class="slide-headline">Cabinet Leveling & Wall Stud Anchoring</h2>
+        <div class="slide-grid">
+          <img src="assets/breda_bed_cabinet_prep.jpg" alt="Wall Anchoring Diagram" class="slide-img">
+          <ul class="step-list">
+            <li class="step-item">
+              <span class="step-num">Step 5:</span>
+              <span class="step-text"><strong>Position & Level:</strong> Stand cabinet upright against wall. Level side-to-side and front-to-back using wood shims under feet.</span>
+            </li>
+            <li class="step-item">
+              <span class="step-num">Step 6:</span>
+              <span class="step-text"><strong>Locate Studs:</strong> Find studs behind top nailer board with stud finder. Mark centers and drill 1/8" pilot holes.</span>
+            </li>
+            <li class="step-item">
+              <span class="step-num">Step 7:</span>
+              <span class="step-text"><strong>Anchor Cabinet:</strong> Countersink with 3/8" bit and drive wall screws into studs. Cover screw heads with Fast Caps.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="slide-content" id="slide-3">
+        <span class="slide-stage-badge">Stage 3 of 6</span>
+        <h2 class="slide-headline">Spring Mechanism Mounting & Arm Cocking</h2>
+        <div class="slide-grid">
+          <img src="assets/breda_bed_spring_prep.jpg" alt="Spring Mechanism Diagram" class="slide-img">
+          <ul class="step-list">
+            <li class="step-item">
+              <span class="step-num">Step 8:</span>
+              <span class="step-text"><strong>Install Springs:</strong> Load required counter-balance springs onto mechanism backing plate based on bed size & mattress weight.</span>
+            </li>
+            <li class="step-item">
+              <span class="step-num">Step 9:</span>
+              <span class="step-text"><strong>Attach Plate:</strong> Secure spring mechanism plates to inside side walls using dedicated hardware tube screws.</span>
+            </li>
+            <li class="step-item">
+              <span class="step-num">Step 10:</span>
+              <span class="step-text"><strong>Cock Mechanism Arms:</strong> Slip PVC helper tube over arm. Pull down firmly until internal arm lock clicks open.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Slide 4 -->
+      <div class="slide-content" id="slide-4">
+        <span class="slide-stage-badge">Stage 4 of 6</span>
+        <h2 class="slide-headline">Bed Frame & Precision 0.5" Reveal Alignment</h2>
+        <div class="slide-grid">
+          <img src="assets/breda_bed_reveal_offset.jpg" alt="Header Reveal Offset Diagram" class="slide-img">
+          <ul class="step-list">
+            <li class="step-item">
+              <span class="step-num">Step 11-12:</span>
+              <span class="step-text"><strong>Frame & Panel Setup:</strong> Connect 4 frame corners (Card 3). Lay door panels face-down pressed tightly along center seam.</span>
+            </li>
+            <li class="step-item">
+              <span class="step-num">Step 13:</span>
+              <span class="step-text"><strong>CRITICAL 0.5" Reveal Offset:</strong> Position metal frame exactly 0.5" from top header end of door panels; drive screws (Card 7).</span>
+            </li>
+            <li class="step-item">
+              <span class="step-num">Step 15:</span>
+              <span class="step-text"><strong>Pivot Bolts:</strong> Insert Hole 1 stop bolt at 6-5/8" and Hole 3 seating bolt at 19-1/4" from header.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Slide 5 -->
+      <div class="slide-content" id="slide-5">
+        <span class="slide-stage-badge">Stage 5 of 6</span>
+        <h2 class="slide-headline">Mounting Bed Face, Legs & Bottom Nailer</h2>
+        <div class="slide-grid">
+          <img src="assets/breda_bed_spring_prep.jpg" alt="Mounting Bed Face" class="slide-img">
+          <ul class="step-list">
+            <li class="step-item">
+              <span class="step-num">Step 16-17:</span>
+              <span class="step-text"><strong>Seat Face Panel:</strong> Lift bed face; seat Hole 3 bolts into arm notches; rotate out and secure Hole 2 & 3 nuts tightly.</span>
+            </li>
+            <li class="step-item">
+              <span class="step-num">Step 18-19:</span>
+              <span class="step-text"><strong>Leg Tie-Rod:</strong> Pull bed face to trip arm safety locks. Install pivot legs and 1/4" steel leg tie-rod bar.</span>
+            </li>
+            <li class="step-item">
+              <span class="step-num">Step 20-21:</span>
+              <span class="step-text"><strong>Align Reveals:</strong> Check reveal gaps upon closing. Anchor bottom nailer to studs. Apply silicone lube if springs squeak.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Slide 6 -->
+      <div class="slide-content" id="slide-6">
+        <span class="slide-stage-badge">Stage 6 of 6</span>
+        <h2 class="slide-headline">Side Hutch Drawers & Cabinet Doors</h2>
+        <div class="slide-grid">
+          <img src="assets/breda_bed_cabinet_prep.jpg" alt="Side Hutch Finishing" class="slide-img">
+          <ul class="step-list">
+            <li class="step-item">
+              <span class="step-num">Step 22-23:</span>
+              <span class="step-text"><strong>Drawer Assembly:</strong> Assemble drawer boxes with cams; mount lower drawer slide tracks and insert into hutch.</span>
+            </li>
+            <li class="step-item">
+              <span class="step-num">Step 24:</span>
+              <span class="step-text"><strong>Hutch Doors:</strong> Press base plates into hole pattern #2; seat 35mm Euro hinges into door cups; snap onto plates.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Slide Navigation Bar -->
+    <div class="controls-bar">
+      <button class="btn btn-secondary" id="prevBtn" onclick="changeSlide(-1)">← Previous</button>
+      <div class="dots-nav" id="dotsContainer">
+        <div class="dot active" onclick="goToSlide(1)"></div>
+        <div class="dot" onclick="goToSlide(2)"></div>
+        <div class="dot" onclick="goToSlide(3)"></div>
+        <div class="dot" onclick="goToSlide(4)"></div>
+        <div class="dot" onclick="goToSlide(5)"></div>
+        <div class="dot" onclick="goToSlide(6)"></div>
+      </div>
+      <button class="btn btn-primary" id="nextBtn" onclick="changeSlide(1)">Next →</button>
+    </div>
+
+  </div>
+
+  <script>
+    let currentSlide = 1;
+    const totalSlides = 6;
+
+    function updateDeck() {
+      // Hide all slides
+      for (let i = 1; i <= totalSlides; i++) {
+        document.getElementById(`slide-${i}`).classList.remove('active');
+        document.querySelectorAll('.dot')[i - 1].classList.remove('active');
+      }
+      // Show current slide
+      document.getElementById(`slide-${currentSlide}`).classList.add('active');
+      document.querySelectorAll('.dot')[currentSlide - 1].classList.add('active');
+      document.getElementById('slideCounter').textContent = `Slide ${currentSlide} of ${totalSlides}`;
+
+      // Enable/disable buttons
+      document.getElementById('prevBtn').style.opacity = currentSlide === 1 ? '0.5' : '1';
+      document.getElementById('nextBtn').style.opacity = currentSlide === totalSlides ? '0.5' : '1';
+    }
+
+    function changeSlide(direction) {
+      if (direction === -1 && currentSlide > 1) {
+        currentSlide--;
+      } else if (direction === 1 && currentSlide < totalSlides) {
+        currentSlide++;
+      }
+      updateDeck();
+    }
+
+    function goToSlide(slideNum) {
+      currentSlide = slideNum;
+      updateDeck();
+    }
+
+    // Keyboard Arrow Key Support
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') changeSlide(-1);
+      if (e.key === 'ArrowRight') changeSlide(1);
+    });
+
+    updateDeck();
+  </script>
+</body>
+</html>

@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Breda Beds Murphy Bed Assembly | Official Manual</title>
+  <meta name="description" content="Official technical manual and step-by-step assembly guide for Breda Beds Murphy Bed wall bed system with side hutches.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-primary: #0f172a;
+      --bg-card: #1e293b;
+      --bg-card-hover: #334155;
+      --accent-blue: #38bdf8;
+      --accent-indigo: #6366f1;
+      --accent-green: #22c55e;
+      --accent-amber: #f59e0b;
+      --accent-red: #ef4444;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --border-color: #334155;
+      --glass-bg: rgba(30, 41, 59, 0.85);
+      --glass-border: rgba(255, 255, 255, 0.1);
+      --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.5);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background-color: var(--bg-primary);
+      color: var(--text-main);
+      line-height: 1.6;
+      padding-top: 80px;
+    }
+
+    /* Navbar */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 70px;
+      background: var(--glass-bg);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--glass-border);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2rem;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: #fff;
+      text-decoration: none;
+    }
+    .brand-icon {
+      font-size: 1.5rem;
+      background: linear-gradient(135deg, var(--accent-blue), var(--accent-indigo));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .nav-links {
+      display: flex;
+      gap: 1rem;
+      list-style: none;
+    }
+    .nav-link {
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+      color: var(--text-muted);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .nav-link:hover, .nav-link.active {
+      color: #fff;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    .nav-link.active {
+      background: linear-gradient(135deg, rgba(56, 189, 248, 0.2), rgba(99, 102, 241, 0.2));
+      border-color: var(--accent-blue);
+      color: var(--accent-blue);
+    }
+
+    /* Container */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+    }
+
+    /* Hero Banner */
+    .hero {
+      background: linear-gradient(135deg, #1e1b4b 0%, #0f172a 100%);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 2.5rem;
+      margin-bottom: 2.5rem;
+      box-shadow: var(--shadow-lg);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -10%;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, rgba(56, 189, 248, 0.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-title {
+      font-size: 2.25rem;
+      font-weight: 800;
+      margin-bottom: 0.75rem;
+      background: linear-gradient(to right, #ffffff, #93c5fd);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero-subtitle {
+      color: var(--text-muted);
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+    }
+    .badge-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+    .badge {
+      padding: 0.4rem 0.9rem;
+      border-radius: 9999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .badge-blue { background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3); }
+    .badge-amber { background: rgba(245, 158, 11, 0.15); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.3); }
+    .badge-red { background: rgba(239, 68, 68, 0.15); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.3); }
+    .badge-green { background: rgba(34, 197, 94, 0.15); color: #4ade80; border: 1px solid rgba(34, 197, 94, 0.3); }
+
+    /* Callout Alert Boxes */
+    .callout {
+      border-left: 4px solid;
+      border-radius: 8px;
+      padding: 1.25rem;
+      margin: 1.5rem 0;
+      background: var(--bg-card);
+    }
+    .callout-warning { border-color: var(--accent-amber); background: rgba(245, 158, 11, 0.08); }
+    .callout-important { border-color: var(--accent-red); background: rgba(239, 68, 68, 0.08); }
+    .callout-title {
+      font-weight: 700;
+      font-size: 1rem;
+      margin-bottom: 0.4rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    /* Content Cards */
+    .section-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+    }
+    .section-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1.25rem;
+      color: #fff;
+      border-bottom: 2px solid var(--border-color);
+      padding-bottom: 0.5rem;
+    }
+
+    /* Tables */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+    }
+    th, td {
+      padding: 0.85rem 1rem;
+      text-align: left;
+      border-bottom: 1px solid var(--border-color);
+    }
+    th {
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--accent-blue);
+      font-weight: 600;
+    }
+
+    /* Quick Links Card */
+    .nav-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+    .nav-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 1.5rem;
+      text-decoration: none;
+      color: var(--text-main);
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .nav-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent-blue);
+      box-shadow: 0 12px 20px -5px rgba(56, 189, 248, 0.15);
+    }
+    .nav-card-icon {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .nav-card-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.5rem;
+    }
+    .nav-card-desc {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    /* Code & Pre */
+    code {
+      font-family: 'JetBrains Mono', monospace;
+      background: rgba(255, 255, 255, 0.08);
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+      font-size: 0.88rem;
+      color: var(--accent-blue);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      body { padding-top: 130px; }
+      .navbar { flex-direction: column; height: auto; padding: 1rem; gap: 0.75rem; }
+      .hero { padding: 1.5rem; }
+      .hero-title { font-size: 1.75rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <nav class="navbar">
+    <a href="index.html" class="brand">
+      <span class="brand-icon">🛏️</span> Breda Beds Manual
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link active">📖 Shop Manual</a></li>
+      <li><a href="deck.html" class="nav-link">🎴 Step Slide Deck</a></li>
+      <li><a href="video.html" class="nav-link">🎥 Video Guide</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    
+    <!-- Hero Banner -->
+    <header class="hero">
+      <h1 class="hero-title">Breda Beds Murphy Bed Assembly Manual</h1>
+      <p class="hero-subtitle">Complete end-to-end technical guide, spec sheet, tool list, and ordered assembly procedure with side hutches.</p>
+      <div class="badge-group">
+        <span class="badge badge-blue">💪 Capacity: 1,400 lbs</span>
+        <span class="badge badge-amber">📐 Reveal Offset: 0.5" (1/2 in)</span>
+        <span class="badge badge-red">⚠️ Anchoring: Mandatory</span>
+        <span class="badge badge-green">✓ Shop Manual Verified</span>
+      </div>
+    </header>
+
+    <!-- Page Quick Jump Grid -->
+    <div class="nav-grid">
+      <a href="index.html" class="nav-card">
+        <div>
+          <div class="nav-card-icon">📖</div>
+          <div class="nav-card-title">1. Full Technical Shop Manual</div>
+          <div class="nav-card-desc">Complete written assembly steps, tool checklists, fastener dimensions, and troubleshooting matrix.</div>
+        </div>
+      </a>
+
+      <a href="deck.html" class="nav-card">
+        <div>
+          <div class="nav-card-icon">🎴</div>
+          <div class="nav-card-title">2. Visual Step Presentation Deck</div>
+          <div class="nav-card-desc">Interactive slide deck walking step-by-step with high-resolution technical blueprint diagrams and hardware callouts.</div>
+        </div>
+      </a>
+
+      <a href="video.html" class="nav-card">
+        <div>
+          <div class="nav-card-icon">🎥</div>
+          <div class="nav-card-title">3. Video Walkthrough & Chapters</div>
+          <div class="nav-card-desc">Embedded YouTube video player with direct chapter jumps for each assembly phase.</div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Critical Alerts -->
+    <div class="callout callout-important">
+      <div class="callout-title">⚠️ MANDATORY STRUCTURAL WALL ANCHORING</div>
+      <p>Do <strong>NOT</strong> cock the spring mechanism arms or lower the bed face assembly until the cabinet is securely leveled and anchored into solid wall studs via both top and bottom nailers. Unanchored cabinets will tip forward violently under spring tension.</p>
+    </div>
+
+    <div class="callout callout-warning">
+      <div class="callout-title">📐 CRITICAL 1/2-INCH REVEAL OFFSET</div>
+      <p>When mounting the steel bed subframe onto the door panels, maintain an exact <strong>0.5" (1/2 inch)</strong> offset from the top header edge. Incorrect placement prevents smooth cabinet closure and binds mechanism pivot arms.</p>
+    </div>
+
+    <!-- Specs Section -->
+    <section class="section-card">
+      <h2 class="section-title">📊 Key Technical Specifications</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Parameter / Specification</th>
+            <th>Value</th>
+            <th>Notes & Placement Reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Subframe Weight Capacity</strong></td>
+            <td><code>1,400 lbs</code></td>
+            <td>Rated across Twin, Full, and Queen frame models</td>
+          </tr>
+          <tr>
+            <td><strong>Header Reveal Offset</strong></td>
+            <td><code>0.5" (1/2 in)</code></td>
+            <td>Offset from door panel top header edge to metal subframe</td>
+          </tr>
+          <tr>
+            <td><strong>Hole 1 Stop Bolt Position</strong></td>
+            <td><code>6-5/8"</code> from header</td>
+            <td>Allen Head Bolt (Rotation Stop Bolt)</td>
+          </tr>
+          <tr>
+            <td><strong>Hole 3 Mechanism Seating Bolt</strong></td>
+            <td><code>19-1/4"</code> from header</td>
+            <td>5/16" Hex Bolt seated into mechanism arm notch</td>
+          </tr>
+          <tr>
+            <td><strong>Wall Stud Anchoring Bits</strong></td>
+            <td><code>1/8"</code> pilot / <code>3/8"</code> countersink</td>
+            <td>Drill through top & bottom nailers directly into wall studs</td>
+          </tr>
+          <tr>
+            <td><strong>Hinge Mounting Position</strong></td>
+            <td>Hole Pattern <code>#2</code></td>
+            <td>35mm Euro Hinges for hutch cabinet doors</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Ordered Instructions Summary -->
+    <section class="section-card">
+      <h2 class="section-title">🛠️ Ordered Step-by-Step Summary</h2>
+      <ol style="margin-left: 1.5rem; display: flex; flex-direction: column; gap: 0.75rem;">
+        <li><strong>Stage 1: Cabinet & Hutch Preparation:</strong> Pre-insert cam fittings; build side hutch units; assemble main cabinet top/bottom nailers.</li>
+        <li><strong>Stage 2: Leveling & Wall Anchoring:</strong> Stand cabinet upright against wall, level with shims, drill 1/8" pilot / 3/8" countersink holes through top nailer into studs, drive wall screws.</li>
+        <li><strong>Stage 3: Mechanism Setup:</strong> Install counter-balance springs, bolt mechanism plates to interior side walls, cock spring arms downward using PVC helper tube until lock clicks.</li>
+        <li><strong>Stage 4: Bed Frame & Door Assembly:</strong> Assemble 4 corners of metal subframe, align door panels face-down, set exact 0.5" header reveal, secure Card 7 screws, install Hole 1 (6-5/8") & Hole 3 (19-1/4") bolts.</li>
+        <li><strong>Stage 5: Bed Face Mounting & Leg Setup:</strong> Seat Hole 3 bolts into arm notches, tighten Hole 2 & 3 nuts, disengage arm locks, install pivot legs and 1/4" leg tie-rod, adjust side reveals, anchor bottom nailer.</li>
+        <li><strong>Stage 6: Hutch Drawers & Doors:</strong> Assemble drawer boxes and slide tracks; mount Euro hinges into hole pattern #2 for hutch cabinet doors.</li>
+      </ol>
+    </section>
+
+  </div>
+
+</body>
+</html>

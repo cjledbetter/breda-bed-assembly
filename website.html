@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Breda Beds Murphy Bed Assembly | Complete Web App Portal</title>
+  <meta name="description" content="All-in-one Breda Beds assembly portal with interactive manual, step presentation slide deck, and video tutorial.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-primary: #0f172a;
+      --bg-card: #1e293b;
+      --bg-card-hover: #334155;
+      --accent-blue: #38bdf8;
+      --accent-indigo: #6366f1;
+      --accent-green: #22c55e;
+      --accent-amber: #f59e0b;
+      --accent-red: #ef4444;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --border-color: #334155;
+      --glass-bg: rgba(30, 41, 59, 0.85);
+      --glass-border: rgba(255, 255, 255, 0.1);
+      --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background-color: var(--bg-primary);
+      color: var(--text-main);
+      line-height: 1.6;
+      padding-top: 80px;
+    }
+
+    /* Navbar Header */
+    .navbar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: 70px;
+      background: var(--glass-bg);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--glass-border);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2rem;
+    }
+    .brand {
+      display: flex; align-items: center; gap: 0.75rem;
+      font-weight: 700; font-size: 1.25rem; color: #fff; text-decoration: none;
+    }
+    .brand-icon {
+      font-size: 1.5rem;
+      background: linear-gradient(135deg, var(--accent-blue), var(--accent-indigo));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+
+    /* Tab Switcher */
+    .tab-group {
+      display: flex;
+      gap: 0.5rem;
+      background: rgba(15, 23, 42, 0.6);
+      padding: 0.3rem;
+      border-radius: 10px;
+      border: 1px solid var(--border-color);
+    }
+    .tab-btn {
+      padding: 0.55rem 1.1rem;
+      border-radius: 8px;
+      border: none;
+      background: transparent;
+      color: var(--text-muted);
+      font-weight: 600;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .tab-btn.active {
+      background: linear-gradient(135deg, var(--accent-blue), var(--accent-indigo));
+      color: #fff;
+      box-shadow: 0 4px 12px rgba(56, 189, 248, 0.25);
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+    }
+
+    /* Views */
+    .tab-view { display: none; }
+    .tab-view.active { display: block; animation: fadeIn 0.3s ease-in-out; }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Cards & Layout */
+    .hero {
+      background: linear-gradient(135deg, #1e1b4b 0%, #0f172a 100%);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 2.5rem;
+      margin-bottom: 2rem;
+      box-shadow: var(--shadow-lg);
+    }
+    .hero-title { font-size: 2.25rem; font-weight: 800; color: #fff; margin-bottom: 0.75rem; }
+    .hero-subtitle { color: var(--text-muted); font-size: 1.1rem; }
+
+    .badge-group { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.25rem; }
+    .badge {
+      padding: 0.4rem 0.9rem; border-radius: 9999px; font-size: 0.85rem; font-weight: 600;
+    }
+    .badge-blue { background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3); }
+    .badge-amber { background: rgba(245, 158, 11, 0.15); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.3); }
+    .badge-red { background: rgba(239, 68, 68, 0.15); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.3); }
+
+    .section-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+    }
+    .section-title { font-size: 1.5rem; font-weight: 700; color: #fff; margin-bottom: 1.25rem; border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem; }
+
+    /* Tables */
+    table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+    th, td { padding: 0.85rem 1rem; text-align: left; border-bottom: 1px solid var(--border-color); }
+    th { background: rgba(255, 255, 255, 0.05); color: var(--accent-blue); font-weight: 600; }
+
+    /* Slide Deck Layout */
+    .slide-wrapper {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: var(--shadow-lg);
+      margin-bottom: 1.5rem;
+    }
+    .slide-content { display: none; }
+    .slide-content.active { display: block; }
+    .slide-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; align-items: center; }
+    @media (max-width: 850px) { .slide-grid { grid-template-columns: 1fr; } }
+    .slide-img { width: 100%; border-radius: 12px; border: 1px solid var(--border-color); object-fit: cover; }
+    
+    .controls-bar {
+      display: flex; justify-content: space-between; align-items: center;
+      background: var(--glass-bg); border: 1px solid var(--border-color);
+      padding: 1rem 1.5rem; border-radius: 12px;
+    }
+    .btn {
+      padding: 0.7rem 1.4rem; border-radius: 8px; font-weight: 600; border: none; cursor: pointer; transition: all 0.2s ease;
+    }
+    .btn-secondary { background: var(--bg-card); color: var(--text-main); border: 1px solid var(--border-color); }
+    .btn-primary { background: linear-gradient(135deg, var(--accent-blue), var(--accent-indigo)); color: #fff; }
+
+    /* Video Player */
+    .video-wrapper {
+      position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;
+      border-radius: 16px; background: #000; border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-lg); margin-bottom: 2rem;
+    }
+    .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="website.html" class="brand">
+      <span class="brand-icon">🛏️</span> Breda Beds Portal
+    </a>
+    
+    <!-- Tab Navigation -->
+    <div class="tab-group">
+      <button class="tab-btn active" onclick="switchTab('manual')">📖 Shop Manual</button>
+      <button class="tab-btn" onclick="switchTab('deck')">🎴 Presentation Deck</button>
+      <button class="tab-btn" onclick="switchTab('video')">🎥 Video Player</button>
+    </div>
+  </nav>
+
+  <div class="container">
+    
+    <!-- TAB 1: SHOP MANUAL -->
+    <div class="tab-view active" id="view-manual">
+      <header class="hero">
+        <h1 class="hero-title">Breda Beds Murphy Bed Assembly Portal</h1>
+        <p class="hero-subtitle">Comprehensive shop manual, specifications, tool checklist, and ordered step instructions.</p>
+        <div class="badge-group">
+          <span class="badge badge-blue">💪 Capacity: 1,400 lbs</span>
+          <span class="badge badge-amber">📐 Reveal Offset: 0.5"</span>
+          <span class="badge badge-red">⚠️ Anchoring: Mandatory</span>
+        </div>
+      </header>
+
+      <section class="section-card">
+        <h2 class="section-title">📊 Key Technical Specifications</h2>
+        <table>
+          <thead>
+            <tr><th>Parameter</th><th>Value</th><th>Reference</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Max Subframe Capacity</strong></td><td><code>1,400 lbs</code></td><td>Twin, Full, and Queen size frames</td></tr>
+            <tr><td><strong>Header Reveal Offset</strong></td><td><code>0.5" (1/2 in)</code></td><td>Distance from top header edge to metal subframe</td></tr>
+            <tr><td><strong>Hole 1 Stop Bolt</strong></td><td><code>6-5/8"</code> from header</td><td>Allen head bolt (rotation stop)</td></tr>
+            <tr><td><strong>Hole 3 Seating Bolt</strong></td><td><code>19-1/4"</code> from header</td><td>5/16" Hex bolt seated into mechanism arm</td></tr>
+            <tr><td><strong>Wall Stud Anchoring</strong></td><td><code>1/8"</code> pilot / <code>3/8"</code> countersink</td><td>Top and bottom nailers into wall studs</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section-card">
+        <h2 class="section-title">📋 6-Stage Ordered Instructions</h2>
+        <ol style="margin-left: 1.5rem; display: flex; flex-direction: column; gap: 0.75rem;">
+          <li><strong>Stage 1: Cabinet Prep:</strong> Insert cams and studs; build side hutch units and attach top/bottom nailers.</li>
+          <li><strong>Stage 2: Leveling & Wall Anchoring:</strong> Stand cabinet upright, level with shims, drill 1/8" pilot holes, drive wall screws into studs.</li>
+          <li><strong>Stage 3: Spring Mechanism:</strong> Load counter-balance springs, bolt mechanism plates to side walls, cock arms with PVC helper tube.</li>
+          <li><strong>Stage 4: Bed Frame & Doors:</strong> Connect 4 frame corners, lay door panels face-down, set 0.5" header reveal, secure Card 7 screws.</li>
+          <li><strong>Stage 5: Face Mounting & Legs:</strong> Seat Hole 3 bolts into arm notches, tighten hardware, release safety locks, install legs and tie-rod.</li>
+          <li><strong>Stage 6: Hutch Drawers & Doors:</strong> Assemble drawer boxes and slide tracks; mount 35mm Euro hinges onto hole pattern #2.</li>
+        </ol>
+      </section>
+    </div>
+
+    <!-- TAB 2: PRESENTATION DECK -->
+    <div class="tab-view" id="view-deck">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+        <h2 style="font-size: 1.75rem; color: #fff;">🎴 Step-by-Step Slide Deck</h2>
+        <div style="background: var(--bg-card); padding: 0.5rem 1rem; border-radius: 9999px; color: var(--accent-blue); font-weight: 600;" id="portalSlideCounter">Slide 1 of 6</div>
+      </div>
+
+      <div class="slide-wrapper">
+        <div class="slide-content active" id="p-slide-1">
+          <h3 style="color: var(--accent-blue); margin-bottom: 0.5rem;">Stage 1: Cabinet & Side Hutch Prep</h3>
+          <div class="slide-grid">
+            <img src="assets/breda_bed_cabinet_prep.jpg" class="slide-img" alt="Cabinet Prep">
+            <div>
+              <p style="margin-bottom: 0.75rem;"><strong>Step 1:</strong> Pre-insert cam fittings and connecting studs into flat panels.</p>
+              <p style="margin-bottom: 0.75rem;"><strong>Step 2:</strong> Join hutch side panels to top/bottom panels; turn cams clockwise.</p>
+              <p><strong>Step 3:</strong> Position hutches 16" from wall and secure top nailer assembly.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide-content" id="p-slide-2">
+          <h3 style="color: var(--accent-blue); margin-bottom: 0.5rem;">Stage 2: Leveling & Wall Anchoring</h3>
+          <div class="slide-grid">
+            <img src="assets/breda_bed_cabinet_prep.jpg" class="slide-img" alt="Wall Anchoring">
+            <div>
+              <p style="margin-bottom: 0.75rem;"><strong>Step 5:</strong> Stand cabinet upright and level front-to-back with wood shims.</p>
+              <p style="margin-bottom: 0.75rem;"><strong>Step 6:</strong> Locate wall studs behind top nailer; drill 1/8" pilot holes.</p>
+              <p><strong>Step 7:</strong> Countersink with 3/8" bit and drive heavy-duty screws into studs.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide-content" id="p-slide-3">
+          <h3 style="color: var(--accent-blue); margin-bottom: 0.5rem;">Stage 3: Spring Mechanism & Arm Cocking</h3>
+          <div class="slide-grid">
+            <img src="assets/breda_bed_spring_prep.jpg" class="slide-img" alt="Spring Mechanism">
+            <div>
+              <p style="margin-bottom: 0.75rem;"><strong>Step 8:</strong> Load springs onto mechanism plate according to mattress weight.</p>
+              <p style="margin-bottom: 0.75rem;"><strong>Step 9:</strong> Bolt mechanism plates securely to interior side walls.</p>
+              <p><strong>Step 10:</strong> Slip PVC helper tube over arm and pull down until internal lock clicks.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide-content" id="p-slide-4">
+          <h3 style="color: var(--accent-blue); margin-bottom: 0.5rem;">Stage 4: 0.5" Header Reveal Offset Alignment</h3>
+          <div class="slide-grid">
+            <img src="assets/breda_bed_reveal_offset.jpg" class="slide-img" alt="Header Reveal">
+            <div>
+              <p style="margin-bottom: 0.75rem;"><strong>Step 11-12:</strong> Connect 4 metal frame corners; lay door panels face-down.</p>
+              <p style="margin-bottom: 0.75rem;"><strong>Step 13:</strong> Set exact 0.5" reveal offset from top header edge before driving Card 7 screws.</p>
+              <p><strong>Step 15:</strong> Install Hole 1 bolt (6-5/8") & Hole 3 bolt (19-1/4").</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide-content" id="p-slide-5">
+          <h3 style="color: var(--accent-blue); margin-bottom: 0.5rem;">Stage 5: Face Mounting, Legs & Bottom Nailer</h3>
+          <div class="slide-grid">
+            <img src="assets/breda_bed_spring_prep.jpg" class="slide-img" alt="Mounting Bed Face">
+            <div>
+              <p style="margin-bottom: 0.75rem;"><strong>Step 16-17:</strong> Seat Hole 3 bolts into arm notches and tighten Hole 2 & 3 hardware.</p>
+              <p style="margin-bottom: 0.75rem;"><strong>Step 18-19:</strong> Disengage safety arm locks; install pivot legs and 1/4" tie-rod.</p>
+              <p><strong>Step 20:</strong> Verify reveal symmetry and anchor bottom nailer into wall studs.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide-content" id="p-slide-6">
+          <h3 style="color: var(--accent-blue); margin-bottom: 0.5rem;">Stage 6: Side Hutch Drawers & Doors</h3>
+          <div class="slide-grid">
+            <img src="assets/breda_bed_cabinet_prep.jpg" class="slide-img" alt="Hutch Finishing">
+            <div>
+              <p style="margin-bottom: 0.75rem;"><strong>Step 22-23:</strong> Assemble drawer boxes and slide tracks; insert into hutch.</p>
+              <p><strong>Step 24:</strong> Mount 35mm Euro hinges onto hole pattern #2 for hutch cabinet doors.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="controls-bar">
+        <button class="btn btn-secondary" onclick="pChangeSlide(-1)">← Previous</button>
+        <button class="btn btn-primary" onclick="pChangeSlide(1)">Next →</button>
+      </div>
+    </div>
+
+    <!-- TAB 3: VIDEO PLAYER -->
+    <div class="tab-view" id="view-video">
+      <h2 style="font-size: 1.75rem; color: #fff; margin-bottom: 1rem;">🎥 Official Video Tutorial</h2>
+      
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/j13vbqS3p0Q?si=uDxDSL93LvTlJBv3" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    function switchTab(tabName) {
+      document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+      document.querySelectorAll('.tab-view').forEach(view => view.classList.remove('active'));
+
+      event.target.classList.add('active');
+      document.getElementById(`view-${tabName}`).classList.add('active');
+    }
+
+    let pSlide = 1;
+    function pChangeSlide(dir) {
+      document.getElementById(`p-slide-${pSlide}`).classList.remove('active');
+      pSlide += dir;
+      if (pSlide < 1) pSlide = 1;
+      if (pSlide > 6) pSlide = 6;
+      document.getElementById(`p-slide-${pSlide}`).classList.add('active');
+      document.getElementById('portalSlideCounter').textContent = `Slide ${pSlide} of 6`;
+    }
+  </script>
+</body>
+</html>
