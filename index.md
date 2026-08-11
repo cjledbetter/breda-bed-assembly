@@ -78,20 +78,22 @@ This technical shop manual details the end-to-end assembly process for the **Bre
 
 ## 3. Required Tools & Hardware Checklist
 
-### 🛠️ Required Tools
-- [ ] **Stud Finder** (Locating wall studs behind drywall)
-- [ ] **Power Drill / Driver** with:
+### 🛠️ Required Tools Checklist
+- [ ] **Magnetic Stud Finder** (Locating wall studs behind drywall)
+- [ ] **Spirit Level** (Verifying cabinet plumb and horizontal level prior to wall anchoring)
+- [ ] **Electric Ratchet / Driver** (Rapid tightening of frame nuts, mechanism bolts, and leg tie-rods)
+- [ ] **Impact Driver** (Driving heavy-duty wall anchor screws into structural studs)
+- [ ] **Power Drill** with:
   - [ ] `1/8"` Drill Bit (Pilot holes into wall studs)
-  - [ ] `3/8"` Drill Bit / Countersink Bit (Countersinking screw heads into nailers)
-- [ ] **Allen Wrench / Hex Key Set** (Frame bolts)
-- [ ] **Wrenches & Socket Set:**
+  - [ ] `3/8"` Drill Bit / Countersink Bit (Countersinking screw heads flush into top & bottom nailers)
+- [ ] **Tape Measure & Precision Ruler** (Critical for measuring exact 0.5" header reveal offset)
+- [ ] **Rubber Mallet** (Tapping cam fittings, wood panels, and leg pivot hardware without marring finish)
+- [ ] **Allen Wrench / Hex Key Set** (Subframe corner connectors & Hole 1 stop bolts)
+- [ ] **Wrench & Socket Set:**
   - [ ] `5/16"` Wrench / Socket (Mechanism bolts & 5/16" Nylock nuts)
   - [ ] `1/4"` Wrench / Socket (Leg tie-rod bolts)
-- [ ] **Screwdrivers** (Phillips & Flathead)
-- [ ] **Rubber Mallet** (Tapping cam fittings & leg hardware)
-- [ ] **PVC Arm Tension Helper Tube** (Included tube for cocking spring arms)
-- [ ] **Tape Measure / Precision Ruler** (Critical for 0.5" header reveal alignment)
-- [ ] **Spirit Level & Shims** (Cabinet level verification)
+- [ ] **Screwdrivers** (Phillips & Flathead for cam fittings and hardware handles)
+- [ ] **PVC Arm Tension Helper Tube** (Included helper tube for cocking spring arms)
 - [ ] **Spray Lubricant** (WD-40 or Silicone spray for spring coils)
 
 ---
