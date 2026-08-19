@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Breda Beds Murphy Bed Assembly Manual | Official Standalone Book</title>
+  <meta name="description" content="Complete standalone shop manual, tool list, specification sheet, and step-by-step assembly guide for Breda Beds wall bed system with side hutches.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <style>
+    :root {
+      --bg-primary: #0f172a;
+      --bg-card: #1e293b;
+      --bg-sidebar: #111827;
+      --accent-blue: #38bdf8;
+      --accent-indigo: #6366f1;
+      --accent-green: #22c55e;
+      --accent-amber: #f59e0b;
+      --accent-red: #ef4444;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --border-color: #334155;
+      --glass-bg: rgba(30, 41, 59, 0.85);
+      --glass-border: rgba(255, 255, 255, 0.1);
+      --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background-color: var(--bg-primary);
+      color: var(--text-main);
+      line-height: 1.7;
+      padding-top: 75px;
+    }
+
+    /* Top Reading Progress Bar */
+    .progress-container {
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 4px;
+      background: rgba(255, 255, 255, 0.05);
+      z-index: 1001;
+    }
+    .progress-bar {
+      height: 100%; width: 0%;
+      background: linear-gradient(90deg, var(--accent-blue), var(--accent-indigo));
+      transition: width 0.1s ease-out;
+    }
+
+    /* Navbar Header */
+    .navbar {
+      position: fixed;
+      top: 4px; left: 0; right: 0;
+      height: 65px;
+      background: var(--glass-bg);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--glass-border);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 1.5rem;
+    }
+    .brand {
+      display: flex; align-items: center; gap: 0.75rem;
+      font-weight: 800; font-size: 1.15rem; color: #fff; text-decoration: none;
+      font-family: 'Outfit', sans-serif;
+    }
+    .brand-icon {
+      font-size: 1.4rem;
+      background: linear-gradient(135deg, var(--accent-blue), var(--accent-indigo));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .nav-links { display: flex; gap: 0.5rem; list-style: none; overflow-x: auto; }
+    .nav-link {
+      padding: 0.5rem 0.9rem; border-radius: 8px; color: var(--text-muted);
+      text-decoration: none; font-weight: 500; font-size: 0.85rem; transition: all 0.2s ease;
+      white-space: nowrap; display: flex; align-items: center; gap: 0.4rem;
+    }
+    .nav-link:hover, .nav-link.active {
+      color: #fff; background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    .nav-link.active {
+      background: linear-gradient(135deg, rgba(56, 189, 248, 0.2), rgba(99, 102, 241, 0.2));
+      border-color: var(--accent-blue); color: var(--accent-blue);
+    }
+
+    /* Book Layout Grid */
+    .book-container {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 2rem;
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+    }
+
+    @media (max-width: 960px) {
+      .book-container { grid-template-columns: 1fr; }
+      .toc-sidebar { display: none; }
+    }
+
+    /* TOC Sidebar */
+    .toc-sidebar {
+      position: sticky;
+      top: 90px;
+      height: calc(100vh - 110px);
+      overflow-y: auto;
+      background: var(--bg-sidebar);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 1.25rem;
+    }
+    .toc-title {
+      font-size: 0.85rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.08em; color: var(--accent-blue); margin-bottom: 1rem;
+      padding-bottom: 0.5rem; border-bottom: 1px solid var(--border-color);
+    }
+    .toc-list { list-style: none; display: flex; flex-direction: column; gap: 0.35rem; }
+    .toc-link {
+      display: block; padding: 0.45rem 0.75rem; border-radius: 6px;
+      color: var(--text-muted); text-decoration: none; font-size: 0.85rem;
+      font-weight: 500; transition: all 0.2s ease;
+    }
+    .toc-link:hover, .toc-link.active {
+      color: #fff; background: rgba(56, 189, 248, 0.12); border-left: 3px solid var(--accent-blue);
+    }
+    .toc-sublink { padding-left: 1.5rem; font-size: 0.8rem; }
+
+    /* Book Main Content */
+    .book-content {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 2.5rem;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .book-header {
+      border-bottom: 2px solid var(--border-color);
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    .book-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2.5rem; font-weight: 800; color: #fff; margin-bottom: 0.5rem;
+      background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .book-subtitle { font-size: 1.1rem; color: var(--text-muted); }
+
+    .badge-bar { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1.25rem; }
+    .badge {
+      padding: 0.35rem 0.85rem; border-radius: 9999px; font-size: 0.8rem; font-weight: 600;
+    }
+    .badge-blue { background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3); }
+    .badge-amber { background: rgba(245, 158, 11, 0.15); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.3); }
+    .badge-red { background: rgba(239, 68, 68, 0.15); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.3); }
+    .badge-green { background: rgba(34, 197, 94, 0.15); color: #4ade80; border: 1px solid rgba(34, 197, 94, 0.3); }
+
+    /* Section Typography */
+    .section-block { margin-bottom: 3rem; scroll-margin-top: 90px; }
+    h2.chapter-heading {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.75rem; font-weight: 700; color: #fff;
+      margin-bottom: 1.25rem; border-bottom: 1px solid var(--border-color);
+      padding-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;
+    }
+    h3.subheading {
+      font-size: 1.25rem; font-weight: 600; color: var(--accent-blue);
+      margin: 1.5rem 0 0.75rem 0;
+    }
+    h4.step-title {
+      font-size: 1.05rem; font-weight: 700; color: #fff;
+      margin: 1.25rem 0 0.5rem 0;
+    }
+
+    /* Callouts & Alerts */
+    .alert-box {
+      border-radius: 10px; padding: 1.25rem 1.5rem; margin: 1.5rem 0;
+      border-left: 4px solid;
+    }
+    .alert-warning {
+      background: rgba(239, 68, 68, 0.1); border-color: var(--accent-red); color: #fca5a5;
+    }
+    .alert-important {
+      background: rgba(56, 189, 248, 0.1); border-color: var(--accent-blue); color: #7dd3fc;
+    }
+    .alert-caution {
+      background: rgba(245, 158, 11, 0.1); border-color: var(--accent-amber); color: #fde047;
+    }
+
+    /* Code Blocks & ASCII Diagrams */
+    pre.diagram-box {
+      background: #090d16;
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      padding: 1.25rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.85rem;
+      color: #38bdf8;
+      overflow-x: auto;
+      margin: 1rem 0;
+    }
+
+    /* Tables */
+    table { width: 100%; border-collapse: collapse; margin: 1.25rem 0; font-size: 0.95rem; }
+    th, td { padding: 0.85rem 1rem; text-align: left; border-bottom: 1px solid var(--border-color); }
+    th { background: rgba(255, 255, 255, 0.05); color: var(--accent-blue); font-weight: 600; }
+    tr:hover { background: rgba(255, 255, 255, 0.02); }
+
+    /* Checkbox List */
+    .checklist { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; margin: 1rem 0; }
+    .checklist-item {
+      display: flex; align-items: flex-start; gap: 0.75rem;
+      background: rgba(15, 23, 42, 0.6); padding: 0.75rem 1rem;
+      border-radius: 8px; border: 1px solid var(--border-color);
+      cursor: pointer; transition: all 0.2s ease;
+    }
+    .checklist-item:hover { border-color: var(--accent-blue); }
+    .checklist-item input[type="checkbox"] {
+      width: 18px; height: 18px; accent-color: var(--accent-blue); cursor: pointer; margin-top: 2px;
+    }
+
+    /* Action Toolbar */
+    .action-bar {
+      display: flex; gap: 1rem; margin-bottom: 1.5rem; justify-content: flex-end;
+    }
+    .btn-action {
+      padding: 0.5rem 1rem; border-radius: 8px; font-weight: 600; font-size: 0.85rem;
+      border: 1px solid var(--border-color); background: var(--bg-card); color: #fff;
+      cursor: pointer; transition: all 0.2s ease; display: flex; align-items: center; gap: 0.4rem;
+    }
+    .btn-action:hover { border-color: var(--accent-blue); color: var(--accent-blue); }
+
+    /* Print Styles */
+    @media print {
+      body { padding-top: 0; background: #fff; color: #000; }
+      .navbar, .progress-container, .toc-sidebar, .action-bar { display: none !important; }
+      .book-container { display: block; padding: 0; }
+      .book-content { border: none; box-shadow: none; padding: 0; background: transparent; }
+      .book-title { color: #000; -webkit-text-fill-color: #000; }
+      table, th, td { border-color: #ccc; color: #000; }
+      pre.diagram-box { background: #f8fafc; color: #000; border-color: #ccc; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="readingProgress"></div>
+  </div>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <a href="index.html" class="brand">
+      <span class="brand-icon">🛏️</span> Breda Beds Manual
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link">📖 Shop Manual</a></li>
+      <li><a href="book.html" class="nav-link active">📚 Standalone Book</a></li>
+      <li><a href="deck.html" class="nav-link">🎴 Slide Deck</a></li>
+      <li><a href="video.html" class="nav-link">🎥 Video Guide</a></li>
+      <li><a href="website.html" class="nav-link">🌐 Portal</a></li>
+    </ul>
+  </nav>
+
+  <div class="book-container">
+    
+    <!-- Table of Contents Sidebar -->
+    <aside class="toc-sidebar">
+      <div class="toc-title">📖 Book Contents</div>
+      <ul class="toc-list">
+        <li><a href="#section-1" class="toc-link">1. Executive Summary & Overview</a></li>
+        <li><a href="#section-2" class="toc-link">2. Key Specs & Dimensions</a></li>
+        <li><a href="#section-3" class="toc-link">3. Required Tools & Hardware</a></li>
+        <li><a href="#section-4" class="toc-link">4. Critical Safety Warnings</a></li>
+        <li><a href="#section-5" class="toc-link">5. Step-by-Step Instructions</a></li>
+        <li><a href="#stage-1" class="toc-link toc-sublink">Stage 1: Cabinet Prep</a></li>
+        <li><a href="#stage-2" class="toc-link toc-sublink">Stage 2: Metal Stud Anchoring</a></li>
+        <li><a href="#stage-3" class="toc-link toc-sublink">Stage 3: Mechanism Setup</a></li>
+        <li><a href="#stage-4" class="toc-link toc-sublink">Stage 4: Bed Frame & Doors</a></li>
+        <li><a href="#stage-5" class="toc-link toc-sublink">Stage 5: Face Mounting & Legs</a></li>
+        <li><a href="#stage-6" class="toc-link toc-sublink">Stage 6: Hutch Drawers & Doors</a></li>
+        <li><a href="#section-6" class="toc-link">6. Assembly Progress Checklist</a></li>
+        <li><a href="#section-7" class="toc-link">7. Troubleshooting & Maintenance</a></li>
+      </ul>
+    </aside>
+
+    <!-- Main Reading Content -->
+    <main class="book-content">
+
+      <!-- Action Toolbar -->
+      <div class="action-bar">
+        <button class="btn-action" onclick="window.print()">🖨️ Print / Save PDF</button>
+        <button class="btn-action" onclick="resetChecklist()">🔄 Reset Progress</button>
+      </div>
+
+      <header class="book-header">
+        <h1 class="book-title">🛏️ Breda Beds Murphy Bed Assembly Book</h1>
+        <p class="book-subtitle">Official Standalone Technical Shop Manual, Hardware Breakdown, & Comprehensive Assembly Guide</p>
+        <div class="badge-bar">
+          <span class="badge badge-blue">💪 Capacity: Up to 1,400 lbs</span>
+          <span class="badge badge-amber">📐 Reveal Offset: 0.5 inch</span>
+          <span class="badge badge-red">⚠️ Anchoring: Mandatory</span>
+          <span class="badge badge-green">✓ Metal Stud Guide Integrated</span>
+        </div>
+      </header>
+
+      <!-- Section 1 -->
+      <section id="section-1" class="section-block">
+        <h2 class="chapter-heading">1. Executive Summary & System Overview</h2>
+        <p>This standalone shop book details the complete end-to-end assembly process for the <strong>Breda Beds Wall Bed System with Side Hutches</strong>.</p>
+        
+        <pre class="diagram-box">
+ +-----------------------------------------------------------------------+
+ |                         TOP NAILER (WALL STUDS)                       |
+ |  +--------------------+  +--------------------+  +-----------------+  |
+ |  |                    |  |                    |  |                 |  |
+ |  |    LEFT HUTCH      |  |     MURPHY BED     |  |   RIGHT HUTCH   |  |
+ |  |  (Cams & Shelves)  |  |      CABINET       |  | (Cams & Drawers)|  |
+ |  |                    |  |                    |  |                 |  |
+ |  |                    |  | +----------------+ |  |                 |  |
+ |  |                    |  | |  BED FACE DOOR | |  |                 |  |
+ |  |                    |  | |  PANELS        | |  |                 |  |
+ |  |                    |  | |                | |  |                 |  |
+ |  |                    |  | +----------------+ |  |                 |  |
+ |  +--------------------+  +--------------------+  +-----------------+  |
+ |                      LOWER NAILER (WALL STUDS)                        |
+ +-----------------------------------------------------------------------+
+        </pre>
+
+        <h3 class="subheading">Key Highlights & Features:</h3>
+        <ul>
+          <li><strong>Heavy-Duty Capacity:</strong> Engineered metal subframe structure rated up to <strong>1,400 lbs</strong> across Twin, Full, and Queen size variants.</li>
+          <li><strong>Counter-Balance Spring System:</strong> High-tension spring mechanisms tuned precisely to mattress weight for effortless one-handed opening and closing.</li>
+          <li><strong>Precision 1/2" Header Reveal Offset:</strong> Precise <code>0.5"</code> offset required when attaching the metal bed subframe onto the door face panels for seamless cabinet closure.</li>
+          <li><strong>Mandatory Structural Wall Anchoring:</strong> Cabinet <strong>MUST</strong> be securely fastened into structural wall studs via top and bottom nailers before cocking tension arms or mounting bed doors.</li>
+        </ul>
+      </section>
+
+      <!-- Section 2 -->
+      <section id="section-2" class="section-block">
+        <h2 class="chapter-heading">2. Key Specs & Dimensions Cheat-Sheet</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Measurement / Parameter</th>
+              <th>Value / Specification</th>
+              <th>Notes / Reference Location</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Max Frame Capacity</strong></td>
+              <td><code>1,400 lbs</code></td>
+              <td>Twin, Full, and Queen Models</td>
+            </tr>
+            <tr>
+              <td><strong>Header Reveal Offset</strong></td>
+              <td><code>0.5" (1/2 inch)</code></td>
+              <td>Distance from door header end to metal frame edge</td>
+            </tr>
+            <tr>
+              <td><strong>Hole 1 Stop Bolt Position</strong></td>
+              <td><code>6-5/8"</code> from header</td>
+              <td>Allen Head Bolt (Acts as rotation stop)</td>
+            </tr>
+            <tr>
+              <td><strong>Hole 3 Mechanism Bolt</strong></td>
+              <td><code>19-1/4"</code> from header</td>
+              <td>5/16" Hex Head seating bolt</td>
+            </tr>
+            <tr>
+              <td><strong>Steel Stud Guide Link</strong></td>
+              <td><a href="https://outline.breda.co/s/walls#h-steel-studs" target="_blank" rel="noopener noreferrer" style="color: var(--accent-blue); text-decoration: underline;">Breda Steel Stud Guide</a></td>
+              <td>Official guide for metal stud mounting</td>
+            </tr>
+            <tr>
+              <td><strong>Metal Stud Anchoring Hardware</strong></td>
+              <td><code>1/4"-20 SnapToggle + 3" Bolts</code></td>
+              <td>1/4"-20 Toggler anchors with 3" bolts for ~2" grip depth</td>
+            </tr>
+            <tr>
+              <td><strong>Fascia Marking Tool</strong></td>
+              <td><code>Lipstick / Grease Pencil</code></td>
+              <td>Put lipstick on stud centers to transfer-mark fascia board</td>
+            </tr>
+            <tr>
+              <td><strong>Mechanism Wrench Size</strong></td>
+              <td><code>5/16"</code> Socket / Wrench</td>
+              <td>For 5/16" Nylock Nuts on mechanism & frame</td>
+            </tr>
+            <tr>
+              <td><strong>Leg Tie-Rod Wrench Size</strong></td>
+              <td><code>1/4"</code> Socket / Wrench</td>
+              <td>For 1/4" Leg Tie-Rod Bolts & Star Washers</td>
+            </tr>
+            <tr>
+              <td><strong>Hinge Base Plate Mount</strong></td>
+              <td>Hole Position <code>#2</code></td>
+              <td>35mm Euro Door Hinges</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Section 3 -->
+      <section id="section-3" class="section-block">
+        <h2 class="chapter-heading">3. Required Tools & Hardware Checklist</h2>
+        
+        <h3 class="subheading">🛠️ Required Tools Checklist</h3>
+        <ul class="checklist">
+          <li class="checklist-item"><input type="checkbox" id="t1"> <label for="t1"><strong>Magnetic Stud Finder</strong> (Locating metal wall studs behind drywall)</label></li>
+          <li class="checklist-item"><input type="checkbox" id="t2"> <label for="t2"><strong>Lipstick / Grease Pencil / Marking Paste</strong> (Put lipstick on stud centerlines to transfer-mark fascia board / top nailer)</label></li>
+          <li class="checklist-item"><input type="checkbox" id="t3"> <label for="t3"><strong>Spirit Level</strong> (Verifying cabinet plumb and horizontal level prior to wall anchoring)</label></li>
+          <li class="checklist-item"><input type="checkbox" id="t4"> <label for="t4"><strong>Electric Ratchet / Driver</strong> (Rapid tightening of frame nuts, mechanism bolts, and leg tie-rods)</label></li>
+          <li class="checklist-item"><input type="checkbox" id="t5"> <label for="t5"><strong>Impact Driver</strong> (Driving 3" machine bolts into SnapToggle anchors or structural studs)</label></li>
+          <li class="checklist-item"><input type="checkbox" id="t6"> <label for="t6"><strong>Power Drill</strong> (with 1/2" SnapToggle bit, 1/8" pilot bit, and 3/8" countersink bit)</label></li>
+          <li class="checklist-item"><input type="checkbox" id="t7"> <label for="t7"><strong>Tape Measure & Precision Ruler</strong> (Critical for measuring exact 0.5" header reveal offset)</label></li>
+          <li class="checklist-item"><input type="checkbox" id="t8"> <label for="t8"><strong>Rubber Mallet</strong> (Tapping cam fittings, wood panels, and leg pivot hardware without marring finish)</label></li>
+          <li class="checklist-item"><input type="checkbox" id="t9"> <label for="t9"><strong>Allen Wrench / Hex Key Set</strong> (Subframe corner connectors & Hole 1 stop bolts)</label></li>
+          <li class="checklist-item"><input type="checkbox" id="t10"> <label for="t10"><strong>Wrench & Socket Set</strong> (5/16" & 1/4" sockets/wrenches)</label></li>
+          <li class="checklist-item"><input type="checkbox" id="t11"> <label for="t11"><strong>Screwdrivers</strong> (Phillips & Flathead for cam fittings and hardware handles)</label></li>
+          <li class="checklist-item"><input type="checkbox" id="t12"> <label for="t12"><strong>PVC Arm Tension Helper Tube</strong> (Included helper tube for cocking spring arms)</label></li>
+          <li class="checklist-item"><input type="checkbox" id="t13"> <label for="t13"><strong>Spray Lubricant</strong> (WD-40 or Silicone spray for spring coils)</label></li>
+        </ul>
+
+        <h3 class="subheading">📦 Hardware Package Breakdown</h3>
+        <ul class="checklist">
+          <li class="checklist-item"><input type="checkbox" id="h1"> <label for="h1"><strong>1/4"-20 SnapToggle Anchors & 3" Bolts</strong> (Required for steel/metal studs; ~2" grip depth)</label></li>
+          <li class="checklist-item"><input type="checkbox" id="h2"> <label for="h2"><strong>Cam Fittings & Cam Connecting Studs</strong> (Panel locking system)</label></li>
+          <li class="checklist-item"><input type="checkbox" id="h3"> <label for="h3"><strong>Fast Caps</strong> (Decorative color-matched screw covers)</label></li>
+          <li class="checklist-item"><input type="checkbox" id="h4"> <label for="h4"><strong>Heavy-Duty Counter-Balance Springs</strong> (Tension mechanism)</label></li>
+          <li class="checklist-item"><input type="checkbox" id="h5"> <label for="h5"><strong>Hardware Card 3</strong> (Bed face frame 4-corner connectors)</label></li>
+          <li class="checklist-item"><input type="checkbox" id="h6"> <label for="h6"><strong>Hardware Card 7</strong> (Metal bed subframe to door panel screws)</label></li>
+          <li class="checklist-item"><input type="checkbox" id="h7"> <label for="h7"><strong>Stop Cylinders</strong> (Inserted into lower corner bracket holes)</label></li>
+          <li class="checklist-item"><input type="checkbox" id="h8"> <label for="h8"><strong>Allen Head Bolts & 5/16" Nylock Nuts</strong> (Hole 1 stop bolt - 6-5/8" offset)</label></li>
+          <li class="checklist-item"><input type="checkbox" id="h9"> <label for="h9"><strong>5/16" Hex Head Bolts & Nylock Nuts</strong> (Hole 3 mechanism seating bolt - 19-1/4" offset, & Hole 2 lock bolt)</label></li>
+          <li class="checklist-item"><input type="checkbox" id="h10"> <label for="h10"><strong>Leg Pivot Assembly Set</strong> (Nylon washers, steel filler washers, steel holding washers, & Nylock nuts)</label></li>
+          <li class="checklist-item"><input type="checkbox" id="h11"> <label for="h11"><strong>Steel Leg Tie-Rod Kit</strong> (Tie-rod bar, 1/4" bolts, star washers)</label></li>
+          <li class="checklist-item"><input type="checkbox" id="h12"> <label for="h12"><strong>Drawer Slide Tracks & Hardware</strong> (Side hutch units)</label></li>
+          <li class="checklist-item"><input type="checkbox" id="h13"> <label for="h13"><strong>35mm Euro Door Hinges & Base Plates</strong> (Mounting position #2)</label></li>
+        </ul>
+      </section>
+
+      <!-- Section 4 -->
+      <section id="section-4" class="section-block">
+        <h2 class="chapter-heading">4. Critical Safety Warnings & Assembly Rules</h2>
+
+        <div class="alert-box alert-warning">
+          <h3>⚠️ HIGH TENSION MECHANISM ARMS</h3>
+          <p>The spring mechanism arms operate under extreme mechanical tension once cocked. <strong>NEVER</strong> attempt to pull down or trip spring mechanism arms without using the provided PVC helper tube and maintaining a firm grip. Keep hands clear of mechanism pivot points.</p>
+        </div>
+
+        <div class="alert-box alert-important">
+          <h3>🏗️ MANDATORY STRUCTURAL WALL ANCHORING & STEEL STUD NOTICE</h3>
+          <p>Do <strong>NOT</strong> cock the spring arms or mount the bed face assembly until the cabinet is securely leveled and anchored to wall studs via both top and bottom nailers.</p>
+          <p style="margin-top: 0.5rem;"><strong>We have metal studs.</strong> Standard wood screws will not hold in light-gauge metal studs under tension. Use <strong>1/4"-20 SnapToggle / Toggler Anchors</strong> with <strong>3-inch x 1/4"-20 machine bolts</strong> to secure top and bottom nailers through the ~1.5" to 2" grip stack-up into 3-5/8" metal studs. Refer to the official <a href="https://outline.breda.co/s/walls#h-steel-studs" target="_blank" rel="noopener noreferrer" style="color: var(--accent-blue); text-decoration: underline; font-weight: 700;">Breda Beds Steel Stud Installation Guide</a>.</p>
+        </div>
+
+        <div class="alert-box alert-caution">
+          <h3>📐 CRITICAL 1/2" REVEAL OFFSET</h3>
+          <p>When securing the metal frame to the rear face of the door panels, you <strong>MUST</strong> measure and set a precise <strong>1/2-inch (0.5")</strong> reveal offset from the header edge. Imprecise alignment will prevent cabinet closure and bind door operation.</p>
+        </div>
+      </section>
+
+      <!-- Section 5 -->
+      <section id="section-5" class="section-block">
+        <h2 class="chapter-heading">5. Step-by-Step Assembly Instructions</h2>
+
+        <div class="mermaid" style="margin: 1.5rem 0; text-align: center;">
+          graph TD
+              A[Stage 1: Cabinet & Side Hutch Prep] --> B[Stage 2: Leveling, Fascia Marking & Metal Stud Anchoring]
+              B --> C[Stage 3: Spring Mechanism & Arm Cocking]
+              C --> D[Stage 4: Bed Frame & Door Panel Assembly]
+              D --> E[Stage 5: Mounting Bed Face & Leg Setup]
+              E --> F[Stage 6: Hutch Drawers & Cabinet Doors]
+        </div>
+
+        <!-- Stage 1 -->
+        <article id="stage-1" style="margin-top: 2rem;">
+          <h3 class="subheading">Stage 1: Cabinet & Side Hutch Preparation</h3>
+          <h4 class="step-title">Step 1: Hardware Pre-Insertion</h4>
+          <p>Lay all cabinet and side hutch panels flat on a clean, soft surface (carpet or blanket). Press cam fittings into pre-bored panel holes and thread cam connecting studs flush.</p>
+          
+          <h4 class="step-title">Step 2: Hutch Assembly</h4>
+          <p>Align the hutch side panels with the top and bottom panels. Turn cam fittings clockwise to securely lock the hutch boxes together.</p>
+
+          <h4 class="step-title">Step 3: Outer Cabinet Assembly</h4>
+          <p>Position the assembled side hutches approximately <code>16"</code> away from the target wall. Attach the top nailer to the bed cabinet top panel. Secure top assembly and lower toe kick to right hutch, then align left hutch and lock all cams.</p>
+
+          <h4 class="step-title">Step 4: Headboard & Lower Nailer</h4>
+          <p>Insert the headboard and lower nailer panel with cam fittings facing upward; tighten cams securely to rigidize overall cabinet superstructure.</p>
+        </article>
+
+        <!-- Stage 2 -->
+        <article id="stage-2" style="margin-top: 2.5rem;">
+          <h3 class="subheading">Stage 2: Leveling, Fascia Marking & Metal Stud Anchoring</h3>
+          <h4 class="step-title">Step 5: Position & Level Cabinet</h4>
+          <p>Carefully tilt the assembled bed cabinet upright and move into final position flush against the wall. Use a spirit level to verify level side-to-side and front-to-back. Slide wood shims underneath feet if necessary.</p>
+
+          <h4 class="step-title">Step 6: Locate Studs & Lipstick Transfer-Mark Fascia Board</h4>
+          <p>Use a magnetic stud finder to locate metal wall studs behind the top nailer board. <strong>The Lipstick Trick:</strong> Apply a small dab of <strong>lipstick</strong> (or grease pencil) onto the center points of the located studs on the wall surface. Press the top nailer / fascia board into its exact leveled position against the wall. The lipstick will transfer exact, clean marks onto the back face of the fascia / nailer board, showing precisely where to drill.</p>
+
+          <h4 class="step-title">Step 7: Drill & Anchor into Metal Studs with 3" SnapToggle Bolts</h4>
+          <p>Drill <code>1/2"</code> holes through drywall and metal stud face at the marked lipstick locations. Insert <strong>1/4"-20 SnapToggle (Toggler) anchors</strong> into metal studs and slide plastic caps flush to drywall. Drill corresponding holes through top nailer board and countersink with a <code>3/8"</code> bit. Drive <strong>3-inch x 1/4"-20 machine bolts</strong> through nailer into SnapToggles (~2" grip depth). Press Fast Caps over bolt heads. (Refer to <a href="https://outline.breda.co/s/walls#h-steel-studs" target="_blank" rel="noopener noreferrer" style="color: var(--accent-blue); text-decoration: underline;">Breda Steel Stud Guide</a>).</p>
+        </article>
+
+        <!-- Stage 3 -->
+        <article id="stage-3" style="margin-top: 2.5rem;">
+          <h3 class="subheading">Stage 3: Mechanism Setup & Arm Cocking</h3>
+          <h4 class="step-title">Step 8: Install Counter-Balance Springs</h4>
+          <p>Consult spring application table for your bed size and mattress weight; insert designated number of heavy-duty springs onto mechanism backing plates.</p>
+
+          <h4 class="step-title">Step 9: Attach Mechanism to Cabinet</h4>
+          <p>Mount spring mechanism plate assembly to interior side walls of cabinet using dedicated hardware tube screws.</p>
+
+          <h4 class="step-title">Step 10: Cock Mechanism Arms</h4>
+          <p>Slip provided <strong>PVC helper tube</strong> over end of spring arm. Firmly pull arm downward until internal arm lock engages with an audible <strong>CLICK</strong>. Repeat for opposite side.</p>
+        </article>
+
+        <!-- Stage 4 -->
+        <article id="stage-4" style="margin-top: 2.5rem;">
+          <h3 class="subheading">Stage 4: Bed Face Frame & Door Panels</h3>
+          <h4 class="step-title">Step 11: Assemble Metal Bed Frame</h4>
+          <p>Lay out heavy-duty steel frame channels on floor; connect 4 corners using <strong>Hardware Card 3</strong>. Press Stop Cylinders into lower corner bracket holes on the two corners farthest from cabinet.</p>
+
+          <h4 class="step-title">Step 12: Align Door Panels</h4>
+          <p>Place door panels face-down on a soft surface with handle holes farthest from cabinet. Press doors tightly together along center seam.</p>
+
+          <h4 class="step-title">Step 13: Frame-to-Door Placement (CRITICAL STEP)</h4>
+          <p>Position assembled metal bed subframe over rear face of door panels. <strong>CRITICAL MEASUREMENT:</strong> Set subframe edge exactly <strong>1/2 INCH (0.5")</strong> back from header end of door panels. Drive mounting screws from <strong>Hardware Card 7</strong> to secure frame to doors.</p>
+
+          <pre class="diagram-box">
+ +-----------------------------------------------------------------------+
+ |                         DOOR PANEL HEADER                             |
+ |                                                                       |
+ |   <====================== 0.5" REVEAL OFFSET ======================>  |
+ |  +-----------------------------------------------------------------+  |
+ |  |                       STEEL BED SUBFRAME                        |  |
+ |  |                                                                 |  |
+          </pre>
+
+          <h4 class="step-title">Step 14: Install Support Stiffeners</h4>
+          <p>Attach center support stiffener channel midway between header and footer frame tubes; install remaining two support stiffeners evenly spaced.</p>
+
+          <h4 class="step-title">Step 15: Install Mechanism Pivot Bolts</h4>
+          <p><strong>Hole 1 (Stop Bolt):</strong> Insert Allen head bolt into Hole 1 (<code>6-5/8"</code> from header) and secure with <code>5/16"</code> Nylock nut. <strong>Hole 3 (Seating Bolt):</strong> Insert <code>5/16"</code> Hex head bolt into Hole 3 (<code>19-1/4"</code> from header) from outside; finger-tighten <code>5/16"</code> Nylock nut.</p>
+        </article>
+
+        <!-- Stage 5 -->
+        <article id="stage-5" style="margin-top: 2.5rem;">
+          <h3 class="subheading">Stage 5: Mounting Bed Face & Leg Setup</h3>
+          <h4 class="step-title">Step 16: Mount Face Assembly to Arms</h4>
+          <p>Lift and position bed face panel assembly vertically between cocked mechanism arms. Seat Hole 3 hex bolts into receiver notches at end of arms.</p>
+
+          <h4 class="step-title">Step 17: Rotate & Secure Bed Face</h4>
+          <p>Pivot bed face outward until Hole 1 Allen stop bolt rests against mechanism notch. Insert <code>5/16"</code> Hex bolt into Hole 2; tighten all nuts at Hole 2 & 3 securely. Attach handles.</p>
+
+          <h4 class="step-title">Step 18: Release Mechanism Arm Locks</h4>
+          <p>Pull outward on top of bed face panel to disengage mechanical arm safety locks (listen for click).</p>
+
+          <h4 class="step-title">Step 19: Install Legs & Tie-Rod</h4>
+          <p>Assemble pivot legs: Slide nylon washer onto leg stem, pass through frame hole, secure inside with steel filler washer, steel holding washer, and <code>5/16"</code> Nylock nut. Rotate legs down; connect steel leg tie-rod bar using <code>1/4"</code> bolts and star washers.</p>
+
+          <h4 class="step-title">Step 20: Align Reveals & Attach Bottom Nailer</h4>
+          <p>Close bed face assembly while pivoting legs closed. Inspect side reveal gaps for uniformity. Attach lower nailer to wall studs with 1 screw per side.</p>
+
+          <h4 class="step-title">Step 21: Spring Coil Lubrication</h4>
+          <p>If spring coil noise is heard during initial operation, spray WD-40 or Silicone Lubricant across spring coils and open/close bed 3-5 times.</p>
+        </article>
+
+        <!-- Stage 6 -->
+        <article id="stage-6" style="margin-top: 2.5rem;">
+          <h3 class="subheading">Stage 6: Side Hutch Drawers & Doors</h3>
+          <h4 class="step-title">Step 22: Drawer Box Assembly</h4>
+          <p>Install cam fittings into side drawer panels; assemble sides to back panel; slide bottom into grooves; attach front face and hardware handles.</p>
+
+          <h4 class="step-title">Step 23: Drawer Slide Track Setup</h4>
+          <p>Mount drawer slide tracks flush to lower edge of drawer box; mount interior slide tracks into pre-bored hutch holes; slide drawers into tracks.</p>
+
+          <h4 class="step-title">Step 24: Hutch Cabinet Doors</h4>
+          <p>Press hinge base plates into outside panel hole pattern <code>#2</code>; seat 35mm Euro hinges into door cup holes and turn locking screws 1/2 turn clockwise; snap hinges onto base plates and adjust alignment screws.</p>
+        </article>
+      </section>
+
+      <!-- Section 6 -->
+      <section id="section-6" class="section-block">
+        <h2 class="chapter-heading">6. Interactive Assembly Progress Checklist</h2>
+        
+        <h3 class="subheading">🟢 Phase 1: Substructure & Wall Anchoring</h3>
+        <ul class="checklist">
+          <li class="checklist-item"><input type="checkbox" id="c1"> <label for="c1">Pre-insert all cam fittings & studs</label></li>
+          <li class="checklist-item"><input type="checkbox" id="c2"> <label for="c2">Assemble side hutch boxes</label></li>
+          <li class="checklist-item"><input type="checkbox" id="c3"> <label for="c3">Join main cabinet & top nailer</label></li>
+          <li class="checklist-item"><input type="checkbox" id="c4"> <label for="c4">Level cabinet with shims</label></li>
+          <li class="checklist-item"><input type="checkbox" id="c5"> <label for="c5">Anchor top nailer into metal studs with 1/4"-20 SnapToggles & 3" bolts</label></li>
+        </ul>
+
+        <h3 class="subheading">🟡 Phase 2: Mechanism Setup</h3>
+        <ul class="checklist">
+          <li class="checklist-item"><input type="checkbox" id="c6"> <label for="c6">Install springs according to mattress weight chart</label></li>
+          <li class="checklist-item"><input type="checkbox" id="c7"> <label for="c7">Bolt mechanism plates to cabinet side walls</label></li>
+          <li class="checklist-item"><input type="checkbox" id="c8"> <label for="c8">Cock spring arms downward using PVC helper tube (listen for lock click)</label></li>
+        </ul>
+
+        <h3 class="subheading">🔵 Phase 3: Bed Face & Frame Assembly</h3>
+        <ul class="checklist">
+          <li class="checklist-item"><input type="checkbox" id="c9"> <label for="c9">Assemble 4 corners of steel subframe (Hardware Card 3)</label></li>
+          <li class="checklist-item"><input type="checkbox" id="c10"> <label for="c10">Place frame onto door panels with exact <strong>0.5" header reveal</strong></label></li>
+          <li class="checklist-item"><input type="checkbox" id="c11"> <label for="c11">Drive frame screws (Hardware Card 7)</label></li>
+          <li class="checklist-item"><input type="checkbox" id="c12"> <label for="c12">Install center and outer support stiffeners</label></li>
+          <li class="checklist-item"><input type="checkbox" id="c13"> <label for="c13">Install Hole 1 stop bolt (6-5/8") & Hole 3 seating bolt (19-1/4")</label></li>
+        </ul>
+
+        <h3 class="subheading">🟣 Phase 4: Final Mounting, Legs & Hutch Finishing</h3>
+        <ul class="checklist">
+          <li class="checklist-item"><input type="checkbox" id="c14"> <label for="c14">Seat Hole 3 bolts into arm notches & secure Hole 2 bolts</label></li>
+          <li class="checklist-item"><input type="checkbox" id="c15"> <label for="c15">Release spring arm safety locks</label></li>
+          <li class="checklist-item"><input type="checkbox" id="c16"> <label for="c16">Install pivot legs & steel leg tie-rod bar (1/4" hardware)</label></li>
+          <li class="checklist-item"><input type="checkbox" id="c17"> <label for="c17">Check reveal symmetry & anchor bottom nailer</label></li>
+          <li class="checklist-item"><input type="checkbox" id="c18"> <label for="c18">Lubricate spring coils if needed</label></li>
+          <li class="checklist-item"><input type="checkbox" id="c19"> <label for="c19">Assemble hutch drawers & install Euro hinge cabinet doors (Hole #2)</label></li>
+        </ul>
+      </section>
+
+      <!-- Section 7 -->
+      <section id="section-7" class="section-block">
+        <h2 class="chapter-heading">7. Troubleshooting & Maintenance</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Issue / Symptom</th>
+              <th>Possible Cause</th>
+              <th>Corrective Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Spring Noise / Squeaking</strong></td>
+              <td>Friction between dry spring coils</td>
+              <td>Spray WD-40 or silicone lube on coils and cycle bed 5 times.</td>
+            </tr>
+            <tr>
+              <td><strong>Uneven Side Reveals</strong></td>
+              <td>Cabinet base out of square</td>
+              <td>Lightly nudge cabinet base or adjust shims under feet before locking bottom nailer.</td>
+            </tr>
+            <tr>
+              <td><strong>Bed Hard to Lower</strong></td>
+              <td>Mattress not yet loaded</td>
+              <td>Heavy initial pull tension is normal until mattress weight is present.</td>
+            </tr>
+            <tr>
+              <td><strong>Cabinet Gaps at Top</strong></td>
+              <td>Top nailer screws loose</td>
+              <td>Re-tighten wall anchor SnapToggle bolts directly into metal stud centers.</td>
+            </tr>
+            <tr>
+              <td><strong>Door Binds When Closing</strong></td>
+              <td>Reveal offset incorrect</td>
+              <td>Loosen Card 7 screws and re-align frame to exact 0.5" header reveal.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+    </main>
+  </div>
+
+  <script>
+    // Initialize Mermaid Diagrams
+    mermaid.initialize({ startOnLoad: true, theme: 'dark' });
+
+    // Reading Progress Bar
+    window.onscroll = function() {
+      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      document.getElementById("readingProgress").style.width = scrolled + "%";
+
+      // TOC Highlight
+      const sections = document.querySelectorAll("section, article[id]");
+      const tocLinks = document.querySelectorAll(".toc-link");
+      let currentSection = "";
+
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 120;
+        if (winScroll >= sectionTop) {
+          currentSection = section.getAttribute("id");
+        }
+      });
+
+      tocLinks.forEach(link => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === "#" + currentSection) {
+          link.classList.add("active");
+        }
+      });
+    };
+
+    // Checklist LocalStorage Persistence
+    document.querySelectorAll('.checklist input[type="checkbox"]').forEach(checkbox => {
+      const saved = localStorage.getItem('breda_book_' + checkbox.id);
+      if (saved === 'true') checkbox.checked = true;
+
+      checkbox.addEventListener('change', () => {
+        localStorage.setItem('breda_book_' + checkbox.id, checkbox.checked);
+      });
+    });
+
+    function resetChecklist() {
+      if (confirm("Reset all interactive checklist progress?")) {
+        document.querySelectorAll('.checklist input[type="checkbox"]').forEach(checkbox => {
+          checkbox.checked = false;
+          localStorage.removeItem('breda_book_' + checkbox.id);
+        });
+      }
+    }
+  </script>
+</body>
+</html>

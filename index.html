@@ -275,8 +275,10 @@
     </a>
     <ul class="nav-links">
       <li><a href="index.html" class="nav-link active">📖 Shop Manual</a></li>
+      <li><a href="book.html" class="nav-link">📚 Standalone Book</a></li>
       <li><a href="deck.html" class="nav-link">🎴 Step Slide Deck</a></li>
       <li><a href="video.html" class="nav-link">🎥 Video Guide</a></li>
+      <li><a href="website.html" class="nav-link">🌐 Portal</a></li>
     </ul>
   </nav>
 
@@ -295,19 +297,27 @@
     </header>
 
     <!-- Page Quick Jump Grid -->
-    <div class="nav-grid">
+    <div class="nav-grid" style="grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));">
       <a href="index.html" class="nav-card">
         <div>
           <div class="nav-card-icon">📖</div>
-          <div class="nav-card-title">1. Full Technical Shop Manual</div>
+          <div class="nav-card-title">1. Full Technical Manual</div>
           <div class="nav-card-desc">Complete written assembly steps, tool checklists, fastener dimensions, and troubleshooting matrix.</div>
+        </div>
+      </a>
+
+      <a href="book.html" class="nav-card">
+        <div>
+          <div class="nav-card-icon">📚</div>
+          <div class="nav-card-title">2. Standalone Book View</div>
+          <div class="nav-card-desc">Digital ebook reader format with sidebar Table of Contents, interactive progress tracking, and print layout.</div>
         </div>
       </a>
 
       <a href="deck.html" class="nav-card">
         <div>
           <div class="nav-card-icon">🎴</div>
-          <div class="nav-card-title">2. Visual Step Presentation Deck</div>
+          <div class="nav-card-title">3. Visual Slide Deck</div>
           <div class="nav-card-desc">Interactive slide deck walking step-by-step with high-resolution technical blueprint diagrams and hardware callouts.</div>
         </div>
       </a>
@@ -315,7 +325,7 @@
       <a href="video.html" class="nav-card">
         <div>
           <div class="nav-card-icon">🎥</div>
-          <div class="nav-card-title">3. Video Walkthrough & Chapters</div>
+          <div class="nav-card-title">4. Video Walkthrough</div>
           <div class="nav-card-desc">Embedded YouTube video player with direct chapter jumps for each assembly phase.</div>
         </div>
       </a>
