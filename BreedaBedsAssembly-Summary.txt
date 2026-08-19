@@ -35,7 +35,7 @@ Key highlights include:
   • Spray Lubricant (WD-40 or Silicone Spray - for spring noise)
 
 [B] Hardware Package Components:
-  • 1/4"-20 SnapToggle (Toggler) Anchors & 3" x 1/4"-20 Machine Bolts (for metal studs; ~2" grip depth; see https://outline.breda.co/s/walls#h-steel-studs)
+  • 1/4"-20 SnapToggle (Toggler) Anchors & 2-1/2" x 1/4"-20 Machine Bolts (for metal studs; ~2" grip depth per Breda suggestion; see https://outline.breda.co/s/walls#h-steel-studs)
   • Cam fittings & Cam connecting studs
   • Fast Caps (decorative screw cover caps)
   • Heavy-duty Counter-Balance Mechanism Springs
@@ -63,7 +63,7 @@ Key highlights include:
 --- STAGE 2: LEVELING, FASCIA MARKING & METAL STUD ANCHORING ---
 5. Position & Level Cabinet: Tilt bed cabinet upright into final position against wall. Check level side-to-side and front-to-back; slide shims underneath cabinet feet if necessary.
 6. Locate Studs & Lipstick Transfer-Mark Fascia: Locate metal studs behind top nailer with stud finder. Put a dab of lipstick on stud center marks on wall, then press top nailer/fascia board flush to transfer exact drill marks onto back of board.
-7. Anchor into Metal Studs: Drill 1/2" holes through drywall & metal stud face at marks; install 1/4"-20 SnapToggle anchors into metal studs. Drill countersunk holes through nailer and drive 3" x 1/4"-20 machine bolts (~2" grip depth). Cover bolt heads with Fast Caps. (Ref: https://outline.breda.co/s/walls#h-steel-studs).
+7. Anchor into Metal Studs: Drill 1/2" holes through drywall & metal stud face at marks; install 1/4"-20 SnapToggle anchors into metal studs. Drill countersunk holes through nailer and drive 2-1/2" x 1/4"-20 machine bolts (~2" grip depth). Cover bolt heads with Fast Caps. (Ref: https://outline.breda.co/s/walls#h-steel-studs).
 
 --- STAGE 3: MECHANISM & ARM COCKING ---
 8. Install Springs: Consult spring application chart for your bed size and mattress weight; insert required number of counter-balance springs onto mechanism plate.
