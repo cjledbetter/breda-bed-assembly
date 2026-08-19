@@ -79,13 +79,15 @@ This technical shop manual details the end-to-end assembly process for the **Bre
 ## 3. Required Tools & Hardware Checklist
 
 ### 🛠️ Required Tools Checklist
-- [ ] **Magnetic Stud Finder** (Locating wall studs behind drywall)
+- [ ] **Magnetic Stud Finder** (Locating metal wall studs behind drywall)
+- [ ] **Lipstick / Grease Pencil / Marking Paste** (Put lipstick on stud centerlines to transfer-mark fascia board / top nailer)
 - [ ] **Spirit Level** (Verifying cabinet plumb and horizontal level prior to wall anchoring)
 - [ ] **Electric Ratchet / Driver** (Rapid tightening of frame nuts, mechanism bolts, and leg tie-rods)
-- [ ] **Impact Driver** (Driving heavy-duty wall anchor screws into structural studs)
+- [ ] **Impact Driver** (Driving 3" machine bolts into SnapToggle anchors or structural studs)
 - [ ] **Power Drill** with:
-  - [ ] `1/8"` Drill Bit (Pilot holes into wall studs)
-  - [ ] `3/8"` Drill Bit / Countersink Bit (Countersinking screw heads flush into top & bottom nailers)
+  - [ ] `1/2"` Drill Bit (Hole for 1/4"-20 SnapToggle anchor channel)
+  - [ ] `1/8"` Drill Bit (Pilot holes into studs)
+  - [ ] `3/8"` Drill Bit / Countersink Bit (Countersinking bolt heads flush into top & bottom nailers)
 - [ ] **Tape Measure & Precision Ruler** (Critical for measuring exact 0.5" header reveal offset)
 - [ ] **Rubber Mallet** (Tapping cam fittings, wood panels, and leg pivot hardware without marring finish)
 - [ ] **Allen Wrench / Hex Key Set** (Subframe corner connectors & Hole 1 stop bolts)
@@ -99,6 +101,7 @@ This technical shop manual details the end-to-end assembly process for the **Bre
 ---
 
 ### 📦 Hardware Package Breakdown
+- [ ] **1/4"-20 SnapToggle Anchors & 3" Bolts** (Required for steel/metal studs; ~2" grip depth)
 - [ ] **Cam Fittings & Cam Connecting Studs** (Panel locking system)
 - [ ] **Fast Caps** (Decorative color-matched screw covers)
 - [ ] **Heavy-Duty Counter-Balance Springs** (Tension mechanism)
@@ -126,8 +129,10 @@ This technical shop manual details the end-to-end assembly process for the **Bre
 > The spring mechanism arms operate under extreme mechanical tension once cocked. **NEVER** attempt to pull down or trip spring mechanism arms without using the provided PVC helper tube and maintaining a firm grip. Keep hands clear of mechanism pivot points.
 
 > [!IMPORTANT]
-> ### MANDATORY STRUCTURAL WALL ANCHORING
-> Do **NOT** cock the spring arms or mount the bed face assembly until the cabinet is securely leveled and anchored to wall studs via both the top and bottom nailers using heavy-duty wall screws. Failure to anchor the cabinet will cause it to tip forward aggressively.
+> ### MANDATORY STRUCTURAL WALL ANCHORING & STEEL STUD NOTICE
+> Do **NOT** cock the spring arms or mount the bed face assembly until the cabinet is securely leveled and anchored to wall studs via both top and bottom nailers.
+> 
+> **We have metal studs.** Standard wood screws will not hold in light-gauge metal studs under tension. Use **1/4"-20 SnapToggle / Toggler Anchors** with **3-inch x 1/4"-20 machine bolts** to secure top and bottom nailers through the ~1.5" to 2" grip stack-up into 3-5/8" metal studs. Refer to the official [Breda Beds Steel Stud Installation Guide](https://outline.breda.co/s/walls#h-steel-studs).
 
 > [!CAUTION]
 > ### CRITICAL 1/2" REVEAL OFFSET
@@ -139,7 +144,7 @@ This technical shop manual details the end-to-end assembly process for the **Bre
 
 ```mermaid
 graph TD
-    A[Stage 1: Cabinet & Side Hutch Prep] --> B[Stage 2: Leveling & Wall Anchoring]
+    A[Stage 1: Cabinet & Side Hutch Prep] --> B[Stage 2: Leveling, Fascia Marking & Metal Stud Anchoring]
     B --> C[Stage 3: Spring Mechanism & Arm Cocking]
     C --> D[Stage 4: Bed Frame & Door Panel Assembly]
     D --> E[Stage 5: Mounting Bed Face & Leg Setup]
@@ -171,22 +176,25 @@ graph TD
 
 ---
 
-### Stage 2: Leveling & Wall Anchoring
+### Stage 2: Leveling, Fascia Marking & Metal Stud Anchoring
 
 #### Step 5: Position & Level Cabinet
 * Carefully tilt the assembled bed cabinet upright and move into final position flush against the wall.
 * Use a spirit level to verify level both side-to-side and front-to-back.
 * Slide wood shims underneath the cabinet feet where necessary to achieve absolute level.
 
-#### Step 6: Mark & Drill Wall Studs
-* Use a stud finder to locate solid wall studs behind the top nailer board.
-* Mark the stud centerlines directly onto the top nailer.
-* Drill `1/8"` pilot holes through the top nailer into each located wall stud.
+#### Step 6: Locate Studs & Lipstick Transfer-Mark Fascia Board
+* Use a magnetic stud finder to locate metal wall studs behind the top nailer board.
+* **The Lipstick Trick:** Apply a small dab of **lipstick** (or grease pencil) onto the center points of the located studs on the wall surface.
+* Carefully tilt/press the top nailer / fascia board into its exact leveled position against the wall.
+* The lipstick will transfer exact, clean marks onto the back face of the fascia / nailer board, showing precisely where to drill.
 
-#### Step 7: Countersink & Drive Wall Screws
-* Countersink all drilled holes using a `3/8"` bit or countersink tool.
-* Drive heavy-duty wall screws through the nailer into the wall studs.
-* Press decorative **Fast Caps** over all exposed screw heads.
+#### Step 7: Drill & Anchor into Metal Studs with 3" SnapToggle Bolts
+* Drill `1/2"` holes through the drywall and metal stud face at the marked lipstick locations.
+* Insert **1/4"-20 SnapToggle (Toggler) anchors** into the metal studs and slide the plastic caps flush to the drywall.
+* Drill corresponding holes through the top nailer board and countersink with a `3/8"` bit.
+* Drive **3-inch x 1/4"-20 machine bolts** through the nailer into the SnapToggles (~2" grip depth).
+* Press decorative **Fast Caps** over all exposed bolt heads. (Refer to [Breda Steel Stud Guide](https://outline.breda.co/s/walls#h-steel-studs)).
 
 ---
 

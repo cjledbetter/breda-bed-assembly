@@ -17,10 +17,12 @@ Key highlights include:
 2. REQUIRED TOOLS & HARDWARE LIST
 ----------------------------------
 [A] Required Tools:
-  • Stud Finder (for locating wall studs behind drywall)
+  • Stud Finder (for locating metal wall studs behind drywall)
+  • Lipstick / Grease Pencil / Transfer Marking Paste (put lipstick on stud centers to transfer-mark fascia / top nailer board)
   • Power Drill / Driver with:
-    - 1/8" Drill Bit (for pilot holes into wall studs)
-    - 3/8" Drill Bit or Countersink Bit (for countersinking screw heads)
+    - 1/2" Drill Bit (for 1/4"-20 SnapToggle anchor holes into metal studs)
+    - 1/8" Drill Bit (for pilot holes into studs)
+    - 3/8" Drill Bit or Countersink Bit (for countersinking bolt heads)
   • Allen Wrench / Hex Keys (for frame bolts)
   • Wrench / Socket Set:
     - 5/16" Wrench/Socket (for 5/16" Nylock nuts on mechanism & frame)
@@ -33,6 +35,7 @@ Key highlights include:
   • Spray Lubricant (WD-40 or Silicone Spray - for spring noise)
 
 [B] Hardware Package Components:
+  • 1/4"-20 SnapToggle (Toggler) Anchors & 3" x 1/4"-20 Machine Bolts (for metal studs; ~2" grip depth; see https://outline.breda.co/s/walls#h-steel-studs)
   • Cam fittings & Cam connecting studs
   • Fast Caps (decorative screw cover caps)
   • Heavy-duty Counter-Balance Mechanism Springs
@@ -43,7 +46,7 @@ Key highlights include:
   • 5/16" Hex Head Bolts & Nylock Nuts (Hole 3 mechanism seating bolt at 19-1/4" from header, & Hole 2 security bolt)
   • Nylon washers, steel filler washers, steel holding washers, & Nylock nuts (Leg pivot assembly)
   • Steel Leg Tie-Rod with 1/4" bolts & star washers
-  • Cabinet Wall Anchoring Screws (Top & bottom nailers)
+  • Cabinet Wall Anchoring Screws & SnapToggle Bolts (Top & bottom nailers)
   • Drawer Slide Hardware & Cam Fittings
   • 35mm Euro Door Hinges & Base Plates (Hole #2 mounting)
 
@@ -57,10 +60,10 @@ Key highlights include:
 3. Outer Cabinet Assembly: Position side hutches ~16" from wall. Attach top nailer to bed cabinet top panel. Secure top assembly and toe kick to right hutch, then align left hutch into position and lock all cams.
 4. Headboard & Lower Nailer: Insert headboard and lower nailer panel with cam fittings facing upward; tighten cams securely.
 
---- STAGE 2: LEVELING & WALL ANCHORING ---
+--- STAGE 2: LEVELING, FASCIA MARKING & METAL STUD ANCHORING ---
 5. Position & Level Cabinet: Tilt bed cabinet upright into final position against wall. Check level side-to-side and front-to-back; slide shims underneath cabinet feet if necessary.
-6. Mark & Drill Wall Studs: Locate studs behind top nailer using a stud finder; mark stud centerlines onto nailer. Drill 1/8" pilot holes through top nailer at each stud location.
-7. Countersink & Drive Wall Screws: Countersink holes with a 3/8" bit. Drive wall screws firmly through nailer into studs. Cover screw heads with Fast Caps.
+6. Locate Studs & Lipstick Transfer-Mark Fascia: Locate metal studs behind top nailer with stud finder. Put a dab of lipstick on stud center marks on wall, then press top nailer/fascia board flush to transfer exact drill marks onto back of board.
+7. Anchor into Metal Studs: Drill 1/2" holes through drywall & metal stud face at marks; install 1/4"-20 SnapToggle anchors into metal studs. Drill countersunk holes through nailer and drive 3" x 1/4"-20 machine bolts (~2" grip depth). Cover bolt heads with Fast Caps. (Ref: https://outline.breda.co/s/walls#h-steel-studs).
 
 --- STAGE 3: MECHANISM & ARM COCKING ---
 8. Install Springs: Consult spring application chart for your bed size and mattress weight; insert required number of counter-balance springs onto mechanism plate.
